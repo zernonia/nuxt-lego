@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
   extends: "..",
-  modules: ["@unocss/nuxt"],
+  modules: ["@unocss/nuxt", "@nuxt/content"],
   css: ["@unocss/reset/tailwind.css"],
 });
