@@ -3,5 +3,6 @@
 <template>
   <div>
     <DemoSocial></DemoSocial>
+    <DemoToc></DemoToc>
   </div>
 </template>

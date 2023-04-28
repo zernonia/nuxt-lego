@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import key from "./.keys";
+
 const props = defineProps<{ text?: string }>();
 
-const path = inject("social-url", "");
+const path = inject(key);
 const url = computed(
   () =>
-    `https://twitter.com/intent/tweet?url=${encodeURI(path)}&text=${encodeURI(
-      props.text ?? ""
-    )}`
+    `https://twitter.com/intent/tweet?url=${encodeURI(
+      path?.value ?? ""
+    )}&text=${encodeURI(props.text ?? "")}`
 );
 </script>
 

@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import key from "./.keys";
+const path = inject(key);
+
 const props = defineProps<{ text?: string }>();
 
-const path = inject("social-url", "");
 const url = computed(
   () =>
     `https://www.linkedin.com/shareArticle/?mini=true&url=${encodeURI(
-      path
+      path?.value ?? ""
     )}&title=${encodeURI(props.text ?? "")}`
 );
 </script>

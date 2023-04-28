@@ -1,8 +1,12 @@
 <script setup lang="ts">
-const path = inject("social-url", "");
+import key from "./.keys";
+const path = inject(key);
 
 const url = computed(
-  () => `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(path)}`
+  () =>
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(
+      path?.value ?? ""
+    )}`
 );
 </script>
 

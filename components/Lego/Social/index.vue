@@ -1,7 +1,12 @@
 <script setup lang="ts">
-const url = window.location.origin;
+import key from "./.keys";
+const url = ref("");
 
-provide("social-url", url);
+onMounted(() => {
+  url.value = window.location.origin;
+});
+
+provide(key, url);
 </script>
 
 <template>

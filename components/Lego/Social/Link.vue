@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useClipboard } from "@vueuse/core";
+import key from "./.keys";
 
-const path = inject("social-url", "");
+const path = inject(key);
 
 const { copy } = useClipboard({ source: path });
 </script>
