@@ -5,6 +5,7 @@
     <DemoSocial></DemoSocial>
     <DemoToc></DemoToc>
 
-    <DemoPageProgress></DemoPageProgress>
+    <DemoTwitter></DemoTwitter>
+    <!-- <DemoPageProgress></DemoPageProgress> -->
   </div>
 </template>

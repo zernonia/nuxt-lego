@@ -8,8 +8,7 @@ const links = computed(() => data.value?.body.toc.links);
 
 <template>
   <LegoToc class="p-4 rounded-lg border w-max">
-    <LegoTocLinks :links="links" v-slot="{ link }" class="ml-4">
-      {{ link.depth }}
+    <LegoTocLinks :links="links" v-slot="{ link }">
       {{ link.text }}
     </LegoTocLinks>
   </LegoToc>
