@@ -1,3 +1,5 @@
 export default defineNuxtConfig({
-  extends: '..'
-})
+  extends: "..",
+  modules: ["@unocss/nuxt"],
+  css: ["@unocss/reset/tailwind.css"],
+});

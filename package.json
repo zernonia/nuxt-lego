@@ -13,8 +13,12 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
+    "@unocss/nuxt": "^0.51.8",
+    "@vueuse/core": "^10.1.0",
+    "@vueuse/nuxt": "^10.1.0",
     "eslint": "^8.39.0",
     "nuxt": "^3.4.2",
+    "nuxt-icon": "^0.4.0",
     "typescript": "^5.0.4"
   }
 }
