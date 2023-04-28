@@ -4,5 +4,7 @@
   <div>
     <DemoSocial></DemoSocial>
     <DemoToc></DemoToc>
+
+    <DemoPageProgress></DemoPageProgress>
   </div>
 </template>
