@@ -8,11 +8,7 @@ const user = computed(() => tweet?.value?.user);
 <template>
   <div v-if="user">
     <slot :user="user">
-      <img :src="user.profile_image_url_https" :alt="user.name" />
-      <Icon
-        v-if="!user.is_blue_verified"
-        name="material-symbols:verified-rounded"
-      ></Icon>
+      <LegoTwitterUserAvatar></LegoTwitterUserAvatar>
       <p>{{ user.name }}</p>
       <p>@{{ user.screen_name }}</p>
     </slot>

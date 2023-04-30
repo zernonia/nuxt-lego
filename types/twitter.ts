@@ -127,6 +127,7 @@ interface TweetUser {
   verified: boolean;
   verified_type: string;
   is_blue_verified: boolean;
+  profile_image_shape: "Circle" | "Square";
 }
 
 interface TweetVideo {

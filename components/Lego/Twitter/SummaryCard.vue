@@ -34,17 +34,16 @@ const info = computed(() => ({
         :alt="card?.name"
       />
 
-      <div>
-        <slot
-          :domain="info.domain"
-          :title="info.title"
-          :description="info.description"
-        >
-          <p>{{ info?.domain }}</p>
-          <p>{{ info?.title }}</p>
-          <p>{{ info?.description }}</p>
-        </slot>
-      </div>
+      <slot
+        :domain="info.domain"
+        :title="info.title"
+        :description="info.description"
+        :is_large_summary_card="isLargeSummaryCard"
+      >
+        <p>{{ info?.domain }}</p>
+        <p>{{ info?.title }}</p>
+        <p>{{ info?.description }}</p>
+      </slot>
     </LegoTwitterLink>
   </div>
 </template>
