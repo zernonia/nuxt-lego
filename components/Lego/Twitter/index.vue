@@ -7,6 +7,8 @@ const props = defineProps<{
 
 const { data } = useFetch(`/api/get-tweet/${props.tweetId}`, { server: false });
 provide(key, data);
+
+// reference from: https://github.com/vercel-labs/react-tweet/
 </script>
 
 <template>
@@ -15,7 +17,10 @@ provide(key, data);
       <LegoTwitterUser></LegoTwitterUser>
       <LegoTwitterText></LegoTwitterText>
 
-      <LazyLegoTwitterMedia></LazyLegoTwitterMedia>
+      <LegoTwitterMedia></LegoTwitterMedia>
+      <LegoTwitterCreatedAt></LegoTwitterCreatedAt>
+      <LegoTwitterAction></LegoTwitterAction>
+      <LegoTwitterReplies></LegoTwitterReplies>
     </slot>
   </div>
 </template>

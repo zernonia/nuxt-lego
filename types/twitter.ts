@@ -5,40 +5,40 @@ interface TweetEditControl {
   edits_remaining: string;
 }
 
-type Indices = [number, number];
+export type Indices = [number, number];
 
-interface HashtagEntity {
+export interface HashtagEntity {
   indices: Indices;
   text: string;
 }
 
-interface UserMentionEntity {
+export interface UserMentionEntity {
   id_str: string;
   indices: Indices;
   name: string;
   screen_name: string;
 }
 
-interface MediaEntity {
+export interface MediaEntity {
   display_url: string;
   expanded_url: string;
   indices: Indices;
   url: string;
 }
 
-interface UrlEntity {
+export interface UrlEntity {
   display_url: string;
   expanded_url: string;
   indices: Indices;
   url: string;
 }
 
-interface SymbolEntity {
+export interface SymbolEntity {
   indices: Indices;
   text: string;
 }
 
-interface TweetEntities {
+export interface TweetEntities {
   hashtags: HashtagEntity[];
   urls: UrlEntity[];
   user_mentions: UserMentionEntity[];
@@ -166,6 +166,7 @@ interface TweetBase {
   text: string;
   user: TweetUser;
   edit_control: TweetEditControl;
+  card: TweetCard;
   isEdited: boolean;
   isStaleEdit: boolean;
 }
@@ -199,4 +200,35 @@ interface QuotedTweet extends TweetBase {
   self_thread: {
     id_str: string;
   };
+}
+
+interface TweetCardBindingValuesBase {
+  string_value: string;
+  type: "STRING";
+}
+
+interface TweetCardBindingValues {
+  title: TweetCardBindingValuesBase;
+  description: TweetCardBindingValuesBase;
+  domain: TweetCardBindingValuesBase;
+  thumbnail_image: {
+    image_value: {
+      height: number;
+      width: number;
+      url: string;
+    };
+  };
+  summary_photo_image: {
+    image_value: {
+      height: number;
+      width: number;
+      url: string;
+    };
+  };
+}
+
+export interface TweetCard {
+  name: "summary" | "summary_large_image";
+  url: string;
+  binding_values: TweetCardBindingValues;
 }

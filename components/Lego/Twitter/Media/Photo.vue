@@ -1,21 +1,6 @@
 <script setup lang="ts">
-import type { MediaPhoto } from "../../../../types";
-
-const getMediaUrl = (
-  media: MediaPhoto,
-  size: "small" | "medium" | "larget"
-): string => {
-  const url = new URL(media.media_url_https);
-  const extension = url.pathname.split(".").pop();
-
-  if (!extension) return media.media_url_https;
-
-  url.pathname = url.pathname.replace(`.${extension}`, "");
-  url.searchParams.set("format", extension);
-  url.searchParams.set("name", size);
-
-  return url.toString();
-};
+import type { MediaPhoto } from "lego/types";
+import { getMediaUrl } from "lego/utils/twitter";
 
 defineProps<{
   media: MediaPhoto;
@@ -23,7 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <img :src="getMediaUrl(media, 'small')" />
-  </div>
+  <img
+    style="object-fit: cover; height: 100%; width: 100%"
+    :src="getMediaUrl(media, 'small')"
+  />
 </template>

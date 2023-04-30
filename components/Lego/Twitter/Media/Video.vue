@@ -1,21 +1,6 @@
 <script setup lang="ts">
-import type { MediaVideo } from "../../../../types";
-
-const getMediaUrl = (
-  media: MediaVideo,
-  size: "small" | "medium" | "larget"
-): string => {
-  const url = new URL(media.media_url_https);
-  const extension = url.pathname.split(".").pop();
-
-  if (!extension) return media.media_url_https;
-
-  url.pathname = url.pathname.replace(`.${extension}`, "");
-  url.searchParams.set("format", extension);
-  url.searchParams.set("name", size);
-
-  return url.toString();
-};
+import type { MediaVideo } from "lego/types";
+import { getMediaUrl } from "lego/utils/twitter";
 
 defineProps<{
   media: MediaVideo;
