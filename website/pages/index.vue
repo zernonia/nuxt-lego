@@ -2,11 +2,12 @@
 
 <template>
   <div>
+    <Hero></Hero>
+
     <DemoSocial></DemoSocial>
     <DemoToc></DemoToc>
 
     <DemoTwitter></DemoTwitter>
-    <!-- <DemoPageProgress></DemoPageProgress> -->
     <DemoBookmark></DemoBookmark>
   </div>
 </template>

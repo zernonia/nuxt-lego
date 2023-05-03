@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "main": "./nuxt.config.ts",
   "scripts": {
-    "dev": "nuxi dev .playground",
-    "build": "nuxt build .playground",
-    "generate": "nuxt generate .playground",
-    "preview": "nuxt preview .playground",
+    "dev": "nuxi dev website",
+    "build": "nuxt build website",
+    "generate": "nuxt generate website",
+    "preview": "nuxt preview website",
     "lint": "eslint .",
-    "postinstall": "nuxt prepare .playground"
+    "postinstall": "nuxt prepare website"
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",

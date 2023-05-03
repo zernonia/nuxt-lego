@@ -5,7 +5,7 @@ const el = ref();
 <template>
   <div>
     <LegoPageProgress :target="el" v-slot="{ progress }">
-      <div class="fixed top-0 h-3 bg-gray-200 w-screen">
+      <div class="fixed left-0 top-0 h-3 bg-gray-200 w-screen">
         <div
           class="h-full bg-blue-300"
           :style="{ width: progress + '%' }"
