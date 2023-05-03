@@ -7,5 +7,6 @@
 
     <DemoTwitter></DemoTwitter>
     <!-- <DemoPageProgress></DemoPageProgress> -->
+    <DemoBookmark></DemoBookmark>
   </div>
 </template>
