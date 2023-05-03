@@ -2,7 +2,7 @@
 
 <template>
   <LegoTwitter
-    tweet-id="1652327167429312512"
+    tweet-id="1653431289406693377"
     class="max-w-[550px] p-4 rounded-xl border"
   >
     <LegoTwitterUser v-slot="{ user }">
@@ -39,16 +39,41 @@
 
     <div class="my-2 h-[1px] w-full bg-gray-200"></div>
 
-    <LegoTwitterAction class="flex space-x-4">
+    <LegoTwitterAction class="text-gray-500 flex space-x-4">
       <LegoTwitterActionLove
-        class="text-pink-600 flex items-center font-semibold text-sm space-x-2 hover:underline"
-      ></LegoTwitterActionLove>
+        class="group flex items-center font-semibold text-sm space-x-1"
+        v-slot="{ favorite_count }"
+      >
+        <LegoTwitterActionLoveIcon
+          class="text-pink-600 group-hover:bg-pink-100 p-1.5 rounded-full w-8 h-8"
+        ></LegoTwitterActionLoveIcon>
+        <span class="group-hover:text-pink-600 group-hover:underline">
+          {{ favorite_count }}
+        </span>
+      </LegoTwitterActionLove>
+
       <LegoTwitterActionReply
-        class="text-blue-400 flex items-center font-semibold text-sm space-x-2 hover:underline"
-      ></LegoTwitterActionReply>
+        class="group flex items-center font-semibold text-sm space-x-1"
+      >
+        <LegoTwitterActionReplyIcon
+          class="text-blue-400 group-hover:bg-blue-100 p-1.5 rounded-full w-8 h-8"
+        ></LegoTwitterActionReplyIcon>
+        <span class="group-hover:text-blue-400 group-hover:underline">
+          Reply
+        </span>
+      </LegoTwitterActionReply>
       <LegoTwitterActionCopy
-        class="text-gray-500 hover:text-green-500 flex items-center font-semibold text-sm space-x-2 hover:underline"
-      ></LegoTwitterActionCopy>
+        class="group flex items-center font-semibold text-sm space-x-1"
+        v-slot="{ copied }"
+      >
+        <LegoTwitterActionCopyIcon
+          class="group-hover:bg-green-100 group-hover:text-green-500 p-1.5 rounded-full w-8 h-8"
+        ></LegoTwitterActionCopyIcon>
+
+        <span class="group-hover:text-green-400 group-hover:underline">
+          {{ copied ? "Copied!" : "Copy link" }}
+        </span>
+      </LegoTwitterActionCopy>
     </LegoTwitterAction>
 
     <LegoTwitterReplies

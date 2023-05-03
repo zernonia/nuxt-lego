@@ -12,10 +12,14 @@ const tweet = inject(key);
     target="_blank"
     rel="noopener noreferrer"
   >
-    <span>{{
-      tweet.conversation_count > 0
-        ? `Read ${formatNumber(tweet.conversation_count)} replies`
-        : "Read more on Twitter"
-    }}</span></a
-  >
+    <slot :conversation_count="tweet.conversation_count">
+      <span
+        >{{
+          tweet.conversation_count > 0
+            ? `Read ${formatNumber(tweet.conversation_count)} replies`
+            : "Read more on Twitter"
+        }}
+      </span>
+    </slot>
+  </a>
 </template>
