@@ -5,8 +5,7 @@ const props = defineProps<{
   url: string;
 }>();
 
-const { data } = useFetch("/api/get-metatags", {
-  server: false,
+const { data, error } = useFetch("/api/get-metatags", {
   method: "POST",
   body: {
     url: props.url,
@@ -22,6 +21,7 @@ provide(key, data);
       :description="data?.description"
       :image="data?.image"
       :url="url"
+      :valid="!error"
     >
       <LegoBookmarkTitle></LegoBookmarkTitle>
       <LegoBookmarkDescription></LegoBookmarkDescription>

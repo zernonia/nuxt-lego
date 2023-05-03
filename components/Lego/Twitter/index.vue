@@ -5,7 +5,7 @@ const props = defineProps<{
   tweetId: string;
 }>();
 
-const { data } = useFetch(`/api/get-tweet/${props.tweetId}`, { server: false });
+const { data, error } = useFetch(`/api/get-tweet/${props.tweetId}`);
 provide(key, data);
 
 // reference from: https://github.com/vercel-labs/react-tweet/
@@ -13,7 +13,7 @@ provide(key, data);
 
 <template>
   <div>
-    <slot>
+    <slot :valid="!error">
       <LegoTwitterUser></LegoTwitterUser>
       <LegoTwitterText></LegoTwitterText>
 

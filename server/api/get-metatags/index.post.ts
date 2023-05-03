@@ -22,7 +22,11 @@ export default defineEventHandler(async (event) => {
     metaTags[tagName] = tagContent;
   }
 
-  const title = metaTags["og:title"] || metaTags["twitter:title"];
+  const titleRegExp = /<title>([^<]*)<\/title>/i;
+  const titleTag = titleRegExp.exec(html);
+
+  const title =
+    titleTag?.[1] || metaTags["og:title"] || metaTags["twitter:title"];
   const description =
     metaTags["description"] ||
     metaTags["og:description"] ||
