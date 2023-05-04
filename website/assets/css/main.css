@@ -1,0 +1,12 @@
+.bg-grid {
+  background: url(~/assets/img/grid.png);
+}
+
+.blur-overlay {
+  background: linear-gradient(
+    180deg,
+    #ffffff00 0%,
+    #ffffff00 65%,
+    #ffffff 100%
+  );
+}

@@ -1,10 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{ id: string }>();
+</script>
 
 <template>
-  <LegoTwitter
-    tweet-id="1653431289406693377"
-    class="max-w-[550px] p-4 rounded-xl border"
-  >
+  <LegoTwitter :tweet-id="id" class="max-w-[550px] p-4 rounded-xl border">
     <LegoTwitterUser v-slot="{ user }">
       <div class="flex items-center">
         <LegoTwitterUserAvatar>

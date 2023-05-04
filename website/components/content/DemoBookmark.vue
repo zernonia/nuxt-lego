@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{ url: string }>();
+</script>
 
 <template>
   <LegoBookmark
     class="mt-4 border rounded-xl overflow-hidden max-w-[550px]"
-    url="https://www.zernonia.com/"
+    :url="url"
     v-slot="{ url, valid }"
   >
     <NuxtLink

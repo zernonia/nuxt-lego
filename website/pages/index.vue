@@ -3,11 +3,6 @@
 <template>
   <div>
     <Hero></Hero>
-
-    <DemoSocial></DemoSocial>
-    <DemoToc></DemoToc>
-
-    <DemoTwitter></DemoTwitter>
-    <DemoBookmark></DemoBookmark>
+    <Showcase></Showcase>
   </div>
 </template>

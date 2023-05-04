@@ -6,6 +6,7 @@ import {
   presetUno,
   presetWebFonts,
   transformerVariantGroup,
+  transformerDirectives,
 } from "unocss";
 
 export default defineConfig({
@@ -21,8 +22,22 @@ export default defineConfig({
     presetUno(),
     presetAttributify(),
     presetIcons(),
-    presetTypography(),
+    presetTypography({
+      cssExtend: {
+        "pre,code": {
+          margin: 0,
+        },
+        h2: {
+          "font-size": "1.5rem",
+          "font-weight": "700",
+        },
+        a: {
+          "text-decoration": "unset",
+          "font-weight": "unset",
+        },
+      },
+    }),
     presetWebFonts(),
   ],
-  transformers: [transformerVariantGroup()],
+  transformers: [transformerDirectives()],
 });
