@@ -3,6 +3,7 @@ export const useCustomHead = (
   description: string = "",
   image: string = "https://nuxt-lego.vercel.app/og.png"
 ) => {
+  const { path } = useRoute();
   const formattedTitle = title + " | NuxtLego";
   return useSeoMeta({
     title() {
@@ -19,6 +20,9 @@ export const useCustomHead = (
     },
     ogImage() {
       return image;
+    },
+    ogUrl() {
+      return "https://nuxt-lego.vercel.app" + path;
     },
     twitterTitle() {
       return formattedTitle;
