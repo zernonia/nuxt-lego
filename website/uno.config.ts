@@ -27,9 +27,11 @@ export default defineConfig({
         "pre,code": {
           margin: 0,
         },
+        h1: {
+          "font-weight": "700",
+        },
         h2: {
           "font-size": "1.5rem",
-          "font-weight": "700",
         },
         a: {
           "text-decoration": "unset",
@@ -37,7 +39,16 @@ export default defineConfig({
         },
       },
     }),
-    presetWebFonts(),
+    presetWebFonts({
+      provider: "google",
+
+      fonts: {
+        sans: {
+          name: "Plus Jakarta Sans",
+          weights: ["400", "500", "600", "700"],
+        },
+      },
+    }),
   ],
   transformers: [transformerDirectives()],
 });

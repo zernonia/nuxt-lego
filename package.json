@@ -8,6 +8,7 @@
     "build": "nuxt build website",
     "generate": "nuxt generate website",
     "preview": "nuxt preview website",
+    "prepare": "nuxt prepare website",
     "lint": "eslint .",
     "postinstall": "nuxt prepare website"
   },

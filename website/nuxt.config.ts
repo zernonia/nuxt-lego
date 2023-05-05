@@ -4,8 +4,9 @@ export default defineNuxtConfig({
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
   content: {
     highlight: {
+      // Theme used in all color schemes.
       theme: "github-light",
-      preload: ["html", "typescript"],
+      preload: ["vue", "ts"],
     },
   },
   nitro: {

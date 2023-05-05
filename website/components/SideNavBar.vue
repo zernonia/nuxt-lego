@@ -5,8 +5,8 @@ const { data } = await useAsyncData("components", () =>
 </script>
 
 <template>
-  <div class="mt-4">
-    <h4 class="font-semibold">Components</h4>
+  <div>
+    <h4 class="font-semibold text-lg">Components</h4>
 
     <div class="mt-4 text-sm flex flex-col space-y-1">
       <NuxtLink v-for="item in data" :to="item._path">{{
@@ -15,3 +15,9 @@ const { data } = await useAsyncData("components", () =>
     </div>
   </div>
 </template>
+
+<style scoped>
+.router-link-active {
+  @apply text-blue-400;
+}
+</style>
