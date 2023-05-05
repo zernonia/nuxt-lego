@@ -20,12 +20,12 @@ defineProps<{ url: string }>();
           <LegoWebsiteCardDescription class="text-xs text-gray-500 mt-2">
           </LegoWebsiteCardDescription>
           <LegoWebsiteCardUrl
-            class="mt-2 text-sm text-gray-500"
+            class="mt-2 text-xs md:text-sm text-gray-500"
           ></LegoWebsiteCardUrl>
         </div>
 
         <LegoWebsiteCardImage
-          class="w-52 border-l object-cover"
+          class="w-28 md:w-52 border-l object-cover"
         ></LegoWebsiteCardImage>
       </NuxtLink>
 

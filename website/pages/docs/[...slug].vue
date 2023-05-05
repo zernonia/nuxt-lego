@@ -10,7 +10,7 @@ useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
 </script>
 
 <template>
-  <main v-if="data" class="prose mx-auto w-full">
+  <main v-if="data" class="prose text-sm md:text-base mx-auto w-full">
     <h1>{{ data.title }}</h1>
     <p v-if="data.description" class="text-lg">{{ data.description }}</p>
     <ContentRenderer :value="data" />

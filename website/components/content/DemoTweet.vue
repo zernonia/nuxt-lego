@@ -27,7 +27,7 @@ defineProps<{ id: string }>();
         </LegoTweetLink>
       </div>
       <LegoTweetText
-        class="mt-4 text-lg"
+        class="mt-4 text-base md:text-lg"
         link-class="text-blue-500 hover:underline"
       ></LegoTweetText>
 
