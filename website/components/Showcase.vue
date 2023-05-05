@@ -65,10 +65,7 @@
       </template>
 
       <h5 class="font-semibold">Website Card</h5>
-      <p class="text-sm mt-1 text-gray-400">
-        With modal and non-modal modes, fine-grained focus control, accessible
-        to screen readers.
-      </p>
+      <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
 
     <ShowcaseCard to="/components/table-of-contents">
@@ -83,10 +80,7 @@
       </template>
 
       <h5 class="font-semibold">Table of Contents</h5>
-      <p class="text-sm mt-1 text-gray-400">
-        With modal and non-modal modes, fine-grained focus control, accessible
-        to screen readers.
-      </p>
+      <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
 
     <ShowcaseCard to="/components/page-progress">
@@ -100,10 +94,7 @@
       </template>
 
       <h5 class="font-semibold">Page progress</h5>
-      <p class="text-sm mt-1 text-gray-400">
-        With modal and non-modal modes, fine-grained focus control, accessible
-        to screen readers.
-      </p>
+      <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
   </div>
 </template>
