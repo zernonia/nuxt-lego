@@ -8,7 +8,7 @@ const user = computed(() => tweet?.value?.user);
 <template>
   <div v-if="user">
     <slot :user="user">
-      <LegoTwitterUserAvatar></LegoTwitterUserAvatar>
+      <LegoTweetUserAvatar></LegoTweetUserAvatar>
       <p>{{ user.name }}</p>
       <p>@{{ user.screen_name }}</p>
     </slot>

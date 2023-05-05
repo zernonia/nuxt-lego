@@ -8,10 +8,13 @@ export default defineNuxtConfig({
       preload: ["html", "typescript"],
     },
   },
-  routeRules: {
-    "/components/**": { prerender: true },
-  },
   nitro: {
     rootDir: ".",
+    routeRules: {
+      "/components/**": { static: true },
+    },
+  },
+  unocss: {
+    configFile: "~/uno.config.ts",
   },
 });

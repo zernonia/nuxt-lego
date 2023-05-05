@@ -14,7 +14,7 @@ const tweet = inject(key);
     aria-label="Reply to this Tweet on Twitter"
   >
     <slot>
-      <LegoTwitterActionReplyIcon></LegoTwitterActionReplyIcon>
+      <LegoTweetActionReplyIcon></LegoTweetActionReplyIcon>
       <span>Reply</span>
     </slot>
   </a>

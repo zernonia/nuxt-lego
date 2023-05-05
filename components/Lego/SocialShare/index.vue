@@ -15,7 +15,7 @@ provide(key, url);
 <template>
   <div>
     <slot>
-      <LegoSocialLink></LegoSocialLink>
+      <LegoSocialShareLink></LegoSocialShareLink>
     </slot>
   </div>
 </template>

@@ -4,37 +4,37 @@ defineProps<{ id: string }>();
 
 <template>
   <Demo>
-    <LegoTwitter
+    <LegoTweet
       :tweet-id="id"
       v-slot="{ url }"
       class="max-w-[550px] bg-white p-4 rounded-xl border"
     >
       <div class="flex justify-between">
-        <LegoTwitterUser v-slot="{ user }">
+        <LegoTweetUser v-slot="{ user }">
           <div class="flex items-center">
-            <LegoTwitterUserAvatar>
+            <LegoTweetUserAvatar>
               <span></span>
-            </LegoTwitterUserAvatar>
+            </LegoTweetUserAvatar>
             <div class="ml-3">
               <p class="font-semibold leading-5">{{ user.name }}</p>
               <p class="text-gray-400">@{{ user.screen_name }}</p>
             </div>
           </div>
-        </LegoTwitterUser>
+        </LegoTweetUser>
 
-        <LegoTwitterLink :href="url">
+        <LegoTweetLink :href="url">
           <Icon name="uil:twitter" class="text-4xl text-blue-300"></Icon>
-        </LegoTwitterLink>
+        </LegoTweetLink>
       </div>
-      <LegoTwitterText
+      <LegoTweetText
         class="mt-4 text-lg"
         link-class="text-blue-500 hover:underline"
-      ></LegoTwitterText>
+      ></LegoTweetText>
 
-      <LegoTwitterMedia
+      <LegoTweetMedia
         class="mt-2 rounded-xl overflow-hidden border max-h-[290px]"
-      ></LegoTwitterMedia>
-      <LegoTwitterSummaryCard
+      ></LegoTweetMedia>
+      <LegoTweetSummaryCard
         class="mt-2 border rounded-xl overflow-hidden bg-white hover:bg-gray-100 transition"
         v-slot="{ title, description, domain }"
       >
@@ -43,55 +43,55 @@ defineProps<{ id: string }>();
           <p>{{ title }}</p>
           <p class="text-sm text-gray-400">{{ description }}</p>
         </div>
-      </LegoTwitterSummaryCard>
+      </LegoTweetSummaryCard>
 
       <div class="mt-2 text-gray-400 flex justify-between">
-        <LegoTwitterCreatedAt></LegoTwitterCreatedAt>
-        <LegoTwitterTerms></LegoTwitterTerms>
+        <LegoTweetCreatedAt></LegoTweetCreatedAt>
+        <LegoTweetTerms></LegoTweetTerms>
       </div>
 
       <div class="my-2 h-[1px] w-full bg-gray-200"></div>
 
-      <LegoTwitterAction class="text-gray-500 flex space-x-4">
-        <LegoTwitterActionLove
+      <LegoTweetAction class="text-gray-500 flex space-x-4">
+        <LegoTweetActionLove
           class="group flex items-center font-semibold text-sm space-x-1"
           v-slot="{ favorite_count }"
         >
-          <LegoTwitterActionLoveIcon
+          <LegoTweetActionLoveIcon
             class="text-pink-600 group-hover:bg-pink-100 p-1.5 rounded-full w-8 h-8"
-          ></LegoTwitterActionLoveIcon>
+          ></LegoTweetActionLoveIcon>
           <span class="group-hover:text-pink-600 group-hover:underline">
             {{ favorite_count }}
           </span>
-        </LegoTwitterActionLove>
+        </LegoTweetActionLove>
 
-        <LegoTwitterActionReply
+        <LegoTweetActionReply
           class="group flex items-center font-semibold text-sm space-x-1"
         >
-          <LegoTwitterActionReplyIcon
+          <LegoTweetActionReplyIcon
             class="text-blue-400 group-hover:bg-blue-100 p-1.5 rounded-full w-8 h-8"
-          ></LegoTwitterActionReplyIcon>
+          ></LegoTweetActionReplyIcon>
           <span class="group-hover:text-blue-400 group-hover:underline">
             Reply
           </span>
-        </LegoTwitterActionReply>
-        <LegoTwitterActionCopy
+        </LegoTweetActionReply>
+        <LegoTweetActionCopy
           class="group flex items-center font-semibold text-sm space-x-1"
           v-slot="{ copied }"
         >
-          <LegoTwitterActionCopyIcon
+          <LegoTweetActionCopyIcon
             class="group-hover:bg-green-100 group-hover:text-green-500 p-1.5 rounded-full w-8 h-8"
-          ></LegoTwitterActionCopyIcon>
+          ></LegoTweetActionCopyIcon>
 
           <span class="group-hover:text-green-400 group-hover:underline">
             {{ copied ? "Copied!" : "Copy link" }}
           </span>
-        </LegoTwitterActionCopy>
-      </LegoTwitterAction>
+        </LegoTweetActionCopy>
+      </LegoTweetAction>
 
-      <LegoTwitterReplies
+      <LegoTweetReplies
         class="py-2 px-4 mt-2 flex justify-center text-sm font-medium text-blue-500 bg-white hover:bg-blue-50 transition rounded-3xl border"
-      ></LegoTwitterReplies>
-    </LegoTwitter>
+      ></LegoTweetReplies>
+    </LegoTweet>
   </Demo>
 </template>

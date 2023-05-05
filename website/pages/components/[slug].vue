@@ -9,7 +9,7 @@ const links = computed(() => data.value?.body.toc.links);
 
 <template>
   <div class="flex">
-    <SideNavBar class="w-64"></SideNavBar>
+    <SideNavBar class="sticky top-6 h-max w-64"></SideNavBar>
 
     <main v-if="data" class="prose mx-auto">
       <h1>{{ data.title }}</h1>

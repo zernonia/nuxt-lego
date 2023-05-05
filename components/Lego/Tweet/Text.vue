@@ -2,7 +2,7 @@
 import { h } from "vue";
 import key from "./.keys";
 import { getHashtagUrl, getUserUrl, getSymbolUrl } from "lego/utils/twitter";
-import LegoTwitterLink from "./Link.vue";
+import LegoTweetLink from "./Link.vue";
 
 import type {
   Tweet,
@@ -113,13 +113,13 @@ const render = () => {
           switch (item.type) {
             case "hashtag":
               return h(
-                LegoTwitterLink,
+                LegoTweetLink,
                 { key: i, class: props.linkClass, href: getHashtagUrl(item) },
                 text
               );
             case "mention":
               return h(
-                LegoTwitterLink,
+                LegoTweetLink,
                 {
                   key: i,
                   class: props.linkClass,
@@ -129,13 +129,13 @@ const render = () => {
               );
             case "url":
               return h(
-                LegoTwitterLink,
+                LegoTweetLink,
                 { key: i, class: props.linkClass, href: item.expanded_url },
                 item.display_url
               );
             case "symbol":
               return h(
-                LegoTwitterLink,
+                LegoTweetLink,
                 { key: i, class: props.linkClass, href: getSymbolUrl(item) },
                 text
               );

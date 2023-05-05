@@ -17,7 +17,7 @@ const favoriteCount = computed(() =>
     rel="noopener noreferrer"
   >
     <slot :favorite_count="favoriteCount">
-      <LegoTwitterActionLoveIcon></LegoTwitterActionLoveIcon>
+      <LegoTweetActionLoveIcon></LegoTweetActionLoveIcon>
       <span>{{ favoriteCount }}</span>
     </slot>
   </a>

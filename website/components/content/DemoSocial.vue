@@ -7,21 +7,21 @@ defineProps<{
 
 <template>
   <Demo>
-    <LegoSocial :url="url" class="text-3xl flex space-x-3">
-      <LegoSocialLink
+    <LegoSocialShare :url="url" class="text-3xl flex space-x-3">
+      <LegoSocialShareLink
         class="text-blue-300 hover:text-blue-400 transition"
-      ></LegoSocialLink>
-      <LegoSocialFacebook
+      ></LegoSocialShareLink>
+      <LegoSocialShareFacebook
         class="text-blue-300 hover:text-blue-400 transition"
-      ></LegoSocialFacebook>
-      <LegoSocialTwitter
-        class="text-blue-300 hover:text-blue-400 transition"
-        :text="text"
-      ></LegoSocialTwitter>
-      <LegoSocialLinkedIn
+      ></LegoSocialShareFacebook>
+      <LegoSocialShareTwitter
         class="text-blue-300 hover:text-blue-400 transition"
         :text="text"
-      ></LegoSocialLinkedIn>
-    </LegoSocial>
+      ></LegoSocialShareTwitter>
+      <LegoSocialShareLinkedIn
+        class="text-blue-300 hover:text-blue-400 transition"
+        :text="text"
+      ></LegoSocialShareLinkedIn>
+    </LegoSocialShare>
   </Demo>
 </template>

@@ -21,7 +21,7 @@ const info = computed(() => ({
 
 <template>
   <div v-if="card && image && info">
-    <LegoTwitterLink
+    <LegoTweetLink
       :href="card?.url"
       :class="{ is_small_card: !isLargeSummaryCard }"
     >
@@ -44,7 +44,7 @@ const info = computed(() => ({
         <p>{{ info?.title }}</p>
         <p>{{ info?.description }}</p>
       </slot>
-    </LegoTwitterLink>
+    </LegoTweetLink>
   </div>
 </template>
 
