@@ -5,7 +5,7 @@ description: Primitive component to render static tweet.
 
 ## Basic example
 
-::demo-twitter{id="1645825178763501568"}
+::demo-tweet{id="1645825178763501568"}
 ::
 
 ```vue[/components/CustomStaticTweet.vue]

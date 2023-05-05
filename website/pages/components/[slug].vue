@@ -9,7 +9,7 @@ const links = computed(() => data.value?.body.toc.links);
 
 <template>
   <div class="flex">
-    <SideNavBar class="sticky top-6 h-max w-64"></SideNavBar>
+    <SideNavBar class="sticky top-20 h-max w-64"></SideNavBar>
 
     <main v-if="data" class="prose mx-auto">
       <h1>{{ data.title }}</h1>
@@ -17,7 +17,7 @@ const links = computed(() => data.value?.body.toc.links);
       <ContentRenderer :value="data" />
     </main>
 
-    <LegoToc class="hidden lg:block text-sm p-4 w-64 h-max sticky top-6">
+    <LegoToc class="hidden lg:block text-sm p-4 w-64 h-max sticky top-20">
       <template #title>
         <div class="ml-4 mb-4 text-xl font-semibold">Quick Nav</div>
       </template>

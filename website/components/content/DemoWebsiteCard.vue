@@ -3,7 +3,7 @@ defineProps<{ url: string }>();
 </script>
 
 <template>
-  <LegoBookmark
+  <LegoWebsiteCard
     class="mt-4 border rounded-xl overflow-hidden max-w-[550px]"
     :url="url"
     v-slot="{ url, valid }"
@@ -15,13 +15,15 @@ defineProps<{ url: string }>();
       class="flex bg-white hover:bg-gray-50 transition"
     >
       <div class="p-4">
-        <LegoBookmarkTitle class="font-medium"></LegoBookmarkTitle>
-        <LegoBookmarkDescription class="text-xs text-gray-500 mt-2">
-        </LegoBookmarkDescription>
-        <LegoBookmarkUrl class="mt-2 text-sm text-gray-500"></LegoBookmarkUrl>
+        <LegoWebsiteCardTitle class="font-medium"></LegoWebsiteCardTitle>
+        <LegoWebsiteCardDescription class="text-xs text-gray-500 mt-2">
+        </LegoWebsiteCardDescription>
+        <LegoWebsiteCardUrl
+          class="mt-2 text-sm text-gray-500"
+        ></LegoWebsiteCardUrl>
       </div>
 
-      <LegoBookmarkImage class="w-52 object-cover"></LegoBookmarkImage>
+      <LegoWebsiteCardImage class="w-52 object-cover"></LegoWebsiteCardImage>
     </NuxtLink>
 
     <div v-else class="p-6 text-sm text-gray-500 text-center">
@@ -29,5 +31,5 @@ defineProps<{ url: string }>();
 
       <Icon class="mb-1 ml-2" name="uil:info-circle"></Icon>
     </div>
-  </LegoBookmark>
+  </LegoWebsiteCard>
 </template>

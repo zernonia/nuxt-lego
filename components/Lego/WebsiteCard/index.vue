@@ -23,10 +23,10 @@ provide(key, data);
       :url="url"
       :valid="!error"
     >
-      <LegoBookmarkTitle></LegoBookmarkTitle>
-      <LegoBookmarkDescription></LegoBookmarkDescription>
-      <LegoBookmarkUrl></LegoBookmarkUrl>
-      <LegoBookmarkImage></LegoBookmarkImage>
+      <LegoWebsiteCardkTitle></LegoWebsiteCardkTitle>
+      <LegoWebsiteCardkDescription></LegoWebsiteCardkDescription>
+      <LegoWebsiteCardkUrl></LegoWebsiteCardkUrl>
+      <LegoWebsiteCardkImage></LegoWebsiteCardkImage>
     </slot>
   </div>
 </template>
