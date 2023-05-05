@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/components/**": { static: true },
+    "/components/**": { prerender: true },
   },
   nitro: {
     rootDir: ".",
