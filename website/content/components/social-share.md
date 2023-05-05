@@ -57,7 +57,7 @@ Wrapper that provide the information required for the child component.
 
 | Prop | Default | Types    | Description                              |
 | ---- | ------- | -------- | ---------------------------------------- |
-| url  | -       | `String` | Default to current route if not provided |
+| url  | -       | `string` | Default to current route if not provided |
 
 ### Twitter, LinkedIn
 
@@ -65,4 +65,4 @@ These 2 child component has extra props, as such:
 
 | Prop | Default | Types    | Description                                          |
 | ---- | ------- | -------- | ---------------------------------------------------- |
-| text | -       | `String` | Default text value when user click on sharing button |
+| text | -       | `string` | Default text value when user click on sharing button |

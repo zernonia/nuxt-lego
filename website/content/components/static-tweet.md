@@ -141,4 +141,4 @@ Wrapper that provide the information required for the child component.
 
 | Prop     | Default | Types    | Description                        |
 | -------- | ------- | -------- | ---------------------------------- |
-| tweet-id | -       | `String` | ID of the tweet you want to render |
+| tweet-id | -       | `string` | ID of the tweet you want to render |

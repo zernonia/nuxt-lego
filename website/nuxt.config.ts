@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       preload: ["html", "typescript"],
     },
   },
+  routeRules: {
+    "/components/**": { static: true },
+  },
   nitro: {
     rootDir: ".",
   },
