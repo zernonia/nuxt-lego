@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useClipboard } from "@vueuse/core";
 import key from "./.keys";
 
 const path = inject(key);

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useDateFormat } from "@vueuse/core";
 import key from "./.keys";
 import { getTweetUrl } from "lego/utils/twitter";
 

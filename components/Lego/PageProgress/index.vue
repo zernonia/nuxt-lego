@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MaybeElementRef } from "@vueuse/core";
+import type { MaybeElementRef } from "@vueuse/core";
 
 const props = defineProps<{
   target: MaybeElementRef;
