@@ -11,19 +11,17 @@ const formatted = useDateFormat(createdAt, "h:mm a · MMM D, YYYY");
 </script>
 
 <template>
-  <div>
-    <a
-      v-if="tweet?.created_at"
-      :href="getTweetUrl(tweet)"
-      target="_blank"
-      rel="noopener noreferrer"
-      :aria-label="formatted"
-    >
-      <slot :created_at="createdAt">
-        <time :dateTime="createdAt?.toISOString()">
-          {{ formatted }}
-        </time>
-      </slot>
-    </a>
-  </div>
+  <a
+    v-if="tweet?.created_at"
+    :href="getTweetUrl(tweet)"
+    target="_blank"
+    rel="noopener noreferrer"
+    :aria-label="formatted"
+  >
+    <slot :created_at="createdAt">
+      <time :dateTime="createdAt?.toISOString()">
+        {{ formatted }}
+      </time>
+    </slot>
+  </a>
 </template>

@@ -9,11 +9,7 @@ const links = computed(() => data.value?.body.toc.links);
 
 <template>
   <div class="flex">
-    <div class="w-64">
-      <h4>Components</h4>
-
-      <NuxtLink to="/components/social-share">Social Share</NuxtLink>
-    </div>
+    <SideNavBar class="w-64"></SideNavBar>
 
     <main v-if="data" class="prose mx-auto">
       <h1>{{ data.title }}</h1>

@@ -8,7 +8,7 @@ description: Primitive component to allow easy sharing for different social medi
 ::demo-social
 ::
 
-```vue
+```vue[/components/CustomSocialShare.vue]
 <script setup lang="ts">
 defineProps<{
   url?: string;
