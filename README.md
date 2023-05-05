@@ -1,73 +1,97 @@
-# Nuxt Layer Starter
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h2 align="center"><strong>NuxtLego</strong></h2>
 
-Create Nuxt extendable layer with this GitHub template.
+  <p align="center"> 
+    Unstyled components for building your
+Nuxt content quick & beautiful.
+    <br />
+    <br />
+    <a href="https://nuxt-lego.vercel.app/">View Demo</a>
+    ·
+    <a href="https://github.com/zernonia/nuxt-lego/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/zernonia/nuxt-lego/issues">Request Feature</a>
+  </p>
+</p>
 
-## Setup
+![NuxtLego](website/public/og.png)
 
-Make sure to install the dependencies:
+# 📇 About The Project
 
-```bash
-pnpm install
-```
+This idea was inspired by [Radix Primitive](https://www.radix-ui.com/), as well as [Oku UI](https://github.com/oku-ui). I wanted to try and create a _non-generic_ component, but using Radix's primitive approach. One example of non-generic component is [Static Tweet](https://nuxt-lego.vercel.app/docs/components/static-tweet).
 
-## Working on your theme
+This project also serve as a playground for me to learn and utilize more of Vue's `provide/inject` API.
 
-Your theme is at the root of this repository, it is exactly like a regular Nuxt project, except you can publish it on NPM.
+Do let me know what component you have in mind that you are longing for ya!
 
-The `.playground` directory should help you on trying your theme during development.
-
-Running `pnpm dev` will prepare and boot `.playground` directory, which imports your theme itself.
-
-## Distributing your theme
-
-Your Nuxt layer is shaped exactly the same as any other Nuxt project, except you can publish it on NPM.
-
-To do so, you only have to check if `files` in `package.json` are valid, then run:
-
-```bash
-npm publish --access public
-```
-
-Once done, your users will only have to run:
-
-```bash
-npm install --save your-theme
-```
-
-Then add the dependency to their `extends` in `nuxt.config`:
+# Getting started
 
 ```ts
-defineNuxtConfig({
-  extends: 'your-theme'
+export default defineNuxtConfig({
+  extends: [
+    ...,
+    "github:zernonia/nuxt-lego#alpha",    // Currently in Alpha stage
+  ]
 })
 ```
 
-## Development Server
+# 🔥 Contributors
 
-Start the development server on http://localhost:3000
+<a href="https://github.com/zernonia/nuxt-lego/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zernonia/nuxt-lego" />
+</a>
+ 
+# 🌎 Local Development
 
-```bash
-pnpm dev
-```
+## Prerequisites
 
-## Production
+Yarn
 
-Build the application for production:
+- ```sh
+  npm install --global yarn
+  ```
 
-```bash
-pnpm build
-```
+## Development
 
-Or statically generate it with:
+1. Clone the repo
+   ```sh
+   git clone https://github.com/zernonia/nuxt-lego.git
+   ```
+2. Install NPM packages
 
-```bash
-pnpm generate
-```
+   ```sh
+   yarn install
+   ```
 
-Locally preview production build:
+3. Run Development instance
+   ```sh
+   yarn dev
+   ```
 
-```bash
-pnpm preview
-```
+# ➕ Contributing
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+# 📜 License
+
+Not Associated with Supabase.
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+# 📧 Contact
+
+Zernonia - [@zernonia](https://twitter.com/zernonia)
+
+# ☕ Support
+
+If you like my work, please buy me a coffee 😳
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/zernonia)
