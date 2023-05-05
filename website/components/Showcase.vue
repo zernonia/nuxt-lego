@@ -2,7 +2,7 @@
 
 <template>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <ShowcaseCard to="/components/social-share">
+    <ShowcaseCard to="/docs/components/social-share">
       <template #image>
         <div class="text-blue-300 text-4xl flex space-x-2">
           <Icon name="mdi:twitter"></Icon>
@@ -14,12 +14,12 @@
 
       <h5 class="font-semibold">Social Share</h5>
       <p class="text-sm mt-1 text-gray-400">
-        With modal and non-modal modes, fine-grained focus control, accessible
-        to screen readers.
+        Primitive component to allow easy sharing for different social media
+        providers.
       </p>
     </ShowcaseCard>
 
-    <ShowcaseCard to="/components/static-tweet">
+    <ShowcaseCard to="/docs/components/static-tweet">
       <template #image>
         <div class="w-64 p-4 mt-12 border bg-white rounded-xl">
           <div class="flex justify-between items-center">
@@ -42,12 +42,11 @@
 
       <h5 class="font-semibold">Static Tweet</h5>
       <p class="text-sm mt-1 text-gray-400">
-        With modal and non-modal modes, fine-grained focus control, accessible
-        to screen readers.
+        Primitive component to render static tweet.
       </p>
     </ShowcaseCard>
 
-    <ShowcaseCard to="/components/website-card">
+    <ShowcaseCard to="/docs/components/website-card">
       <template #image>
         <div
           class="mt-4 h-22 flex items-center border rounded-xl overflow-hidden"
@@ -68,7 +67,7 @@
       <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
 
-    <ShowcaseCard to="/components/table-of-contents">
+    <ShowcaseCard to="/docs/components/table-of-contents">
       <template #image>
         <div class="px-4 py-6 flex flex-col space-y-2">
           <div class="h-2 w-36 rounded-full bg-gray-100"></div>
@@ -83,7 +82,7 @@
       <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
 
-    <ShowcaseCard to="/components/page-progress">
+    <ShowcaseCard to="/docs/components/page-progress">
       <template #image>
         <div>
           <div class="absolute top-10 right-8 font-bold text-4xl text-blue-300">

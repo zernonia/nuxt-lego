@@ -7,7 +7,7 @@ const props = defineProps<{
   tweetId: string;
 }>();
 
-const { data, error } = useFetch(`/api/get-tweet/${props.tweetId}`);
+const { data, error, pending } = useFetch(`/api/get-tweet/${props.tweetId}`);
 provide(key, data);
 
 const url = computed(() => (data?.value ? getTweetUrl(data.value) : ""));
@@ -15,7 +15,7 @@ const url = computed(() => (data?.value ? getTweetUrl(data.value) : ""));
 
 <template>
   <div>
-    <slot :valid="!error" :url="url">
+    <slot :valid="!error" :url="url" :pending="pending">
       <LegoTweetUser></LegoTweetUser>
       <LegoTweetText></LegoTweetText>
 

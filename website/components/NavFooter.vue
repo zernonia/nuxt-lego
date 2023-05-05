@@ -5,7 +5,12 @@
     <div class="border-t w-full pt-8">
       <div>
         A project by
-        <NuxtLink target="_blank" to="https://zernonia.com">Zernonia</NuxtLink>
+        <NuxtLink
+          class="font-semibold"
+          target="_blank"
+          to="https://zernonia.com"
+          >Zernonia</NuxtLink
+        >
       </div>
     </div>
   </footer>

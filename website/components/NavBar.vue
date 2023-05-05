@@ -7,7 +7,7 @@
     </h1>
 
     <div>
-      <NuxtLink to="">
+      <NuxtLink to="https://github.com/zernonia/nuxt-lego" target="_blank">
         <Icon class="text-3xl" name="uil:github"></Icon>
       </NuxtLink>
     </div>
