@@ -1,6 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <a href="https://github.com/zernonia/nuxt-lego">
+    <img src="website/public/logo.svg" alt="Logo" width="80" height="80" />
+  </a>
   <h2 align="center"><strong>NuxtLego</strong></h2>
 
   <p align="center"> 

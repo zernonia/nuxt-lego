@@ -17,9 +17,13 @@ watch(
 <template>
   <header class="px-4 md:px-6 py-4 flex items-center justify-between z-10">
     <h1>
-      <NuxtLink to="/" class="text-2xl md:text-3xl font-bold"
-        >NuxtLego</NuxtLink
+      <NuxtLink
+        to="/"
+        class="text-2xl md:text-3xl font-bold flex items-center space-x-2"
       >
+        <img src="/logo.svg" alt="NuxtLego" class="w-8 md:w-10" />
+        <span>NuxtLego</span>
+      </NuxtLink>
     </h1>
 
     <div class="flex items-center">
