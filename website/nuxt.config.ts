@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: "..",
+  extends: [".."],
   modules: ["@unocss/nuxt", "@nuxt/content"],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
   content: {

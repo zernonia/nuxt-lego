@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="text-gray-700 max-w-screen-xl mx-auto">
     <NavBar

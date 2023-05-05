@@ -5,6 +5,8 @@ const { data } = await useAsyncData(slug.value, () =>
 );
 
 const links = computed(() => data.value?.body.toc.links);
+
+useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
 </script>
 
 <template>

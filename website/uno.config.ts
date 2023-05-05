@@ -36,6 +36,7 @@ export default defineConfig({
         a: {
           "text-decoration": "unset",
           "font-weight": "unset",
+          color: "rgba(96,165,250,var(--un-text-opacity))",
         },
       },
     }),
