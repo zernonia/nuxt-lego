@@ -5,7 +5,7 @@ const props = defineProps<{
   url: string;
 }>();
 
-const { data, error } = useFetch("/api/get-metatags", {
+const { data, error, pending } = useFetch("/api/get-metatags", {
   method: "POST",
   body: {
     url: props.url,
@@ -22,11 +22,12 @@ provide(key, data);
       :image="data?.image"
       :url="url"
       :valid="!error"
+      :pending="pending"
     >
-      <LegoWebsiteCardkTitle></LegoWebsiteCardkTitle>
-      <LegoWebsiteCardkDescription></LegoWebsiteCardkDescription>
-      <LegoWebsiteCardkUrl></LegoWebsiteCardkUrl>
-      <LegoWebsiteCardkImage></LegoWebsiteCardkImage>
+      <LegoWebsiteCardTitle></LegoWebsiteCardTitle>
+      <LegoWebsiteCardDescription></LegoWebsiteCardDescription>
+      <LegoWebsiteCardUrl></LegoWebsiteCardUrl>
+      <LegoWebsiteCardImage></LegoWebsiteCardImage>
     </slot>
   </div>
 </template>
