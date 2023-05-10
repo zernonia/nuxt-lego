@@ -15,7 +15,7 @@ const url = computed(
 <template>
   <NuxtLink :to="url" target="_blank">
     <slot>
-      <Icon name="uil:linkedin"></Icon>
+      <Icon name="uil:linkedin" />
     </slot>
   </NuxtLink>
 </template>

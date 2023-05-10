@@ -7,6 +7,8 @@ const url = computed(() => bookmark?.value?.url);
 
 <template>
   <div>
-    <slot :url="url">{{ url }}</slot>
+    <slot :url="url">
+      {{ url }}
+    </slot>
   </div>
 </template>

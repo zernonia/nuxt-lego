@@ -153,5 +153,5 @@ const render = () => {
 </script>
 
 <template>
-  <render></render>
+  <render />
 </template>

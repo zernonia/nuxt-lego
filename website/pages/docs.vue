@@ -4,8 +4,8 @@
   <div class="flex">
     <SideNavBar
       class="hidden md:block sticky top-21 py-4 h-max w-44 shrink-0"
-    ></SideNavBar>
+    />
 
-    <NuxtPage></NuxtPage>
+    <NuxtPage />
   </div>
 </template>

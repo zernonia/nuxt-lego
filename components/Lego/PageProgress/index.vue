@@ -12,9 +12,9 @@ const offsetTop = ref(0);
 onMounted(() => {
   window.addEventListener("scroll", () => {
     const { documentElement, body } = document;
-    let windowScroll =
+    const windowScroll =
       (body.scrollTop || documentElement.scrollTop) - offsetTop.value;
-    let height =
+    const height =
       documentElement.scrollHeight -
       documentElement.clientHeight -
       offsetTop.value;

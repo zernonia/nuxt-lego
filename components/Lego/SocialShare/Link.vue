@@ -9,7 +9,7 @@ const { copy } = useClipboard({ source: path });
 <template>
   <button @click="copy()">
     <slot>
-      <Icon name="uil:share-alt"></Icon>
+      <Icon name="uil:share-alt" />
     </slot>
   </button>
 </template>

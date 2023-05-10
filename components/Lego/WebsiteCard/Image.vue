@@ -6,5 +6,5 @@ const image = computed(() => bookmark?.value?.image);
 </script>
 
 <template>
-  <img v-if="image" :src="image" />
+  <img v-if="image" :src="image">
 </template>

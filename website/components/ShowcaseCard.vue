@@ -12,8 +12,8 @@ defineProps<{
       >
         <div
           class="blur-overlay w-full h-full absolute pointer-events-none"
-        ></div>
-        <slot name="image"></slot>
+        />
+        <slot name="image" />
       </div>
 
       <div class="p-4">

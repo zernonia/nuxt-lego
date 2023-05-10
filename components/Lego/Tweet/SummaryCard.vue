@@ -32,7 +32,7 @@ const info = computed(() => ({
         }"
         :src="image.url"
         :alt="card?.name"
-      />
+      >
 
       <slot
         :domain="info.domain"

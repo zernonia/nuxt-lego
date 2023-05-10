@@ -23,12 +23,12 @@ function scrollToHeading(id: string) {
 
       <LegoTocLinks
         v-if="link.children"
+        v-slot="{ link: childLink }"
         :links="link.children"
-        v-bind:class="$attrs.class"
-        v-bind:style="$attrs.style"
-        v-slot="{ link }"
+        :class="$attrs.class"
+        :style="$attrs.style"
       >
-        <slot v-bind:link="link"></slot>
+        <slot :link="childLink" />
       </LegoTocLinks>
     </li>
   </ul>

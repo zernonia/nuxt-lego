@@ -3,9 +3,9 @@
 <template>
   <div>
     <slot>
-      <LegoTweetActionLove></LegoTweetActionLove>
-      <LegoTweetActionReply></LegoTweetActionReply>
-      <LegoTweetActionCopy></LegoTweetActionCopy>
+      <LegoTweetActionLove />
+      <LegoTweetActionReply />
+      <LegoTweetActionCopy />
     </slot>
   </div>
 </template>

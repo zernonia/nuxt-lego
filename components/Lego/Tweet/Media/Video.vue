@@ -18,6 +18,6 @@ defineProps<{
     <source
       :src="media.url"
       :type="media.video_info.variants?.[0].content_type"
-    />
+    >
   </video>
 </template>

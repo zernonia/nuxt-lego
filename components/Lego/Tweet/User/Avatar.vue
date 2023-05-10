@@ -14,13 +14,13 @@ const user = computed(() => tweet?.value?.user);
       }"
       :src="user.profile_image_url_https"
       :alt="user.name"
-    />
+    >
 
     <slot :verified="user.verified || user.is_blue_verified">
       <Icon
         v-if="user.verified || user.is_blue_verified"
         name="material-symbols:verified-rounded"
-      ></Icon>
+      />
     </slot>
   </div>
 </template>

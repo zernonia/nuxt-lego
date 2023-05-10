@@ -21,20 +21,20 @@ watch(
         to="/"
         class="text-2xl md:text-3xl font-bold flex items-center space-x-2"
       >
-        <img src="/logo.svg" alt="NuxtLego" class="w-8 md:w-10" />
+        <img src="/logo.svg" alt="NuxtLego" class="w-8 md:w-10">
         <span>NuxtLego</span>
       </NuxtLink>
     </h1>
 
     <div class="flex items-center">
       <NuxtLink to="https://github.com/zernonia/nuxt-lego" target="_blank">
-        <Icon class="text-3xl" name="uil:github"></Icon>
+        <Icon class="text-3xl" name="uil:github" />
       </NuxtLink>
       <button
-        @click="isShowingMenu = !isShowingMenu"
         class="block md:hidden p-1 ml-1"
+        @click="isShowingMenu = !isShowingMenu"
       >
-        <Icon name="ph:list-fill" class="text-2xl"></Icon>
+        <Icon name="ph:list-fill" class="text-2xl" />
       </button>
     </div>
 
@@ -52,7 +52,7 @@ watch(
         @click.self="isShowingMenu = false"
       >
         <div class="bg-white p-4 border-b rounded-b-xl">
-          <SideNavBar></SideNavBar>
+          <SideNavBar />
         </div>
       </div>
     </Transition>

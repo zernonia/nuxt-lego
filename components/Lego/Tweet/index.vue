@@ -16,13 +16,13 @@ const url = computed(() => (data?.value ? getTweetUrl(data.value) : ""));
 <template>
   <div>
     <slot :valid="!error" :url="url" :pending="pending">
-      <LegoTweetUser></LegoTweetUser>
-      <LegoTweetText></LegoTweetText>
+      <LegoTweetUser />
+      <LegoTweetText />
 
-      <LegoTweetMedia></LegoTweetMedia>
-      <LegoTweetCreatedAt></LegoTweetCreatedAt>
-      <LegoTweetAction></LegoTweetAction>
-      <LegoTweetReplies></LegoTweetReplies>
+      <LegoTweetMedia />
+      <LegoTweetCreatedAt />
+      <LegoTweetAction />
+      <LegoTweetReplies />
     </slot>
   </div>
 </template>

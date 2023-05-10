@@ -17,13 +17,15 @@ const tree = computed(() => {
 
 <template>
   <div>
-    <div v-for="(child, key) of tree" class="mb-6">
-      <h4 class="font-semibold text-lg capitalize">{{ key }}</h4>
+    <div v-for="(child, key) of tree" :key="key" class="mb-6">
+      <h4 class="font-semibold text-lg capitalize">
+        {{ key }}
+      </h4>
 
       <div class="mt-2 text-sm flex flex-col space-y-1">
-        <NuxtLink v-for="item in child" :to="item._path">{{
-          item.title
-        }}</NuxtLink>
+        <NuxtLink v-for="item in child" :key="item.title" :to="item._path">
+          {{ item.title }}
+        </NuxtLink>
       </div>
     </div>
   </div>

@@ -24,10 +24,10 @@ provide(key, data);
       :valid="!error"
       :pending="pending"
     >
-      <LegoWebsiteCardTitle></LegoWebsiteCardTitle>
-      <LegoWebsiteCardDescription></LegoWebsiteCardDescription>
-      <LegoWebsiteCardUrl></LegoWebsiteCardUrl>
-      <LegoWebsiteCardImage></LegoWebsiteCardImage>
+      <LegoWebsiteCardTitle />
+      <LegoWebsiteCardDescription />
+      <LegoWebsiteCardUrl />
+      <LegoWebsiteCardImage />
     </slot>
   </div>
 </template>

@@ -15,15 +15,9 @@ const gridClass = computed(() => {
 
 <template>
   <div v-if="mediaDetails.length" :class="gridClass">
-    <template v-for="media in mediaDetails">
-      <LegoTweetMediaPhoto
-        v-if="media.type === 'photo'"
-        :media="media"
-      ></LegoTweetMediaPhoto>
-      <LegoTweetMediaVideo
-        v-if="media.type === 'video'"
-        :media="media"
-      ></LegoTweetMediaVideo>
+    <template v-for="(media, index) in mediaDetails" :key="index">
+      <LegoTweetMediaPhoto v-if="media.type === 'photo'" :media="media" />
+      <LegoTweetMediaVideo v-if="media.type === 'video'" :media="media" />
     </template>
   </div>
 </template>

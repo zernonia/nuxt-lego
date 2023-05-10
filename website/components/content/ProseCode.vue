@@ -12,7 +12,7 @@ const { copy, copied } = useClipboard({ source: code });
 
 <template>
   <div class="group relative border rounded-xl bg-gray-100">
-    <div class="mr-4 mt-4 md:mr-0 md:mt-0 flex justify-end" v-if="filename">
+    <div v-if="filename" class="mr-4 mt-4 md:mr-0 md:mt-0 flex justify-end">
       <samp
         class="not-prose w-max md:absolute top-4 right-4 opacity-70 md:group-hover:opacity-0 transition text-xs px-2 py-1 bg-gray-200 rounded"
       >
@@ -24,8 +24,8 @@ const { copy, copied } = useClipboard({ source: code });
       class="absolute bottom-4 right-4 text-lg w-10 h-10 flex items-center justify-center rounded-lg border opacity-0 group-hover:opacity-70 text-gray-500 transition bg-white"
       @click="copy()"
     >
-      <Icon v-if="!copied" name="uil:clipboard"></Icon>
-      <Icon v-else name="uil:check"></Icon>
+      <Icon v-if="!copied" name="uil:clipboard" />
+      <Icon v-else name="uil:check" />
     </button>
     <slot />
   </div>

@@ -13,7 +13,7 @@ provide(copiedKey, copied);
 <template>
   <button v-if="tweet" @click="copy()">
     <slot :copied="copied">
-      <LegoTweetActionCopyIcon></LegoTweetActionCopyIcon>
+      <LegoTweetActionCopyIcon />
 
       <span>
         {{ copied ? "Copied!" : "Copy link" }}

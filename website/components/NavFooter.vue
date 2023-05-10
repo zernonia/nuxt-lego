@@ -9,8 +9,9 @@
           class="font-semibold"
           target="_blank"
           to="https://zernonia.com"
-          >Zernonia</NuxtLink
         >
+          Zernonia
+        </NuxtLink>
       </div>
     </div>
   </footer>

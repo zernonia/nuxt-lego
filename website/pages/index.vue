@@ -4,7 +4,7 @@ useCustomHead("Primitives", "Ready made UI components with Nuxt layer.");
 
 <template>
   <div>
-    <Hero></Hero>
-    <Showcase></Showcase>
+    <Hero />
+    <Showcase />
   </div>
 </template>
