@@ -4,7 +4,15 @@
   <a href="https://github.com/zernonia/nuxt-lego">
     <img src="website/public/logo.svg" alt="Logo" width="80" height="80" />
   </a>
-  <h2 align="center"><strong>NuxtLego</strong></h2>
+  <p align="center">
+  <a href='https://github.com/zernonia/nuxt-lego/actions/workflows/test.yml'>
+  </a>
+  <a href="https://www.npmjs.com/package/nuxt-lego" target="__blank"><img src="https://img.shields.io/npm/v/nuxt-lego?style=flat&colorA=002438&colorB=28CF8D" alt="NPM version"></a>
+  <a href="https://www.npmjs.com/package/nuxt-lego" target="__blank"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/nuxt-lego?flat&colorA=002438&colorB=28CF8D"></a>
+  <a href="https://github.com/zernonia/nuxt-lego" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/zernonia/nuxt-lego?flat&colorA=002438&colorB=28CF8D"></a>
+  </p>
+
+  <h1 align="center"><strong>NuxtLego</strong></h1>
 
   <p align="center"> 
     Unstyled components for building your
