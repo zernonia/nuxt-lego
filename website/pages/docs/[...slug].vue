@@ -10,7 +10,7 @@ useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
 </script>
 
 <template>
-  <div>
+  <div class="flex w-full">
     <main v-if="data" class="prose text-sm md:text-base mx-auto w-full">
       <h1>{{ data.title }}</h1>
       <p v-if="data.description" class="text-lg">
@@ -23,9 +23,7 @@ useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
       class="hidden lg:block text-sm p-4 w-44 h-max sticky top-21 shrink-0"
     >
       <template #title>
-        <div class="ml-4 mb-4 text-xl font-semibold">
-          Quick Nav
-        </div>
+        <div class="ml-4 mb-4 text-xl font-semibold">Quick Nav</div>
       </template>
 
       <LegoTocLinks v-slot="{ link }" class="ml-4" :links="links">

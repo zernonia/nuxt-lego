@@ -15,9 +15,9 @@ export default defineNuxtConfig({
   },
   nitro: {
     rootDir: ".",
-    routeRules: {
-      "/": { static: true },
-      "/components/**": { static: true },
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
     },
   },
   unocss: {
