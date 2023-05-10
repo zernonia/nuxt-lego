@@ -1,7 +1,7 @@
 {
   "name": "nuxt-lego",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Unstyled components for building your Nuxt content quick & beautiful.",
   "license": "MIT",
   "homepage": "https://nuxt-lego.vercel.app/",
@@ -27,7 +27,6 @@
     "preview": "nuxt preview website",
     "prepare": "nuxt prepare website",
     "lint": "eslint .",
-    "postinstall": "nuxt prepare website",
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
