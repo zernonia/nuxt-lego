@@ -56,14 +56,8 @@ _nuxt.config.ts_
 
 ```ts
 export default defineNuxtConfig({
-  extends: [
-    ...,
-    "nuxt-lego",
-  ],
-  alias: {
-    "@vueuse/core": require.resolve("@vueuse/core/index.mjs"), // issue: https://github.com/nuxt/nuxt/issues/18448
-  },
-})
+  extends: ["nuxt-lego"],
+});
 ```
 
 # 🔥 Contributors
