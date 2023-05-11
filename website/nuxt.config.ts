@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   modules: ["@unocss/nuxt", "@nuxt/content", "@nuxt/devtools"],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
+  components: [{ path: "~/components", global: true }],
   content: {
     highlight: {
       theme: "github-light",

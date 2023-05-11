@@ -6,9 +6,7 @@ import glob from "fast-glob";
 
 const rootPath = resolve(".");
 const codeCache = new Map<string, string>();
-const codeFilePaths = [
-  ...glob.sync(resolve("website/components/content", "*.vue")),
-];
+const codeFilePaths = [...glob.sync(resolve("website", "**", "Demo.vue"))];
 
 codeFilePaths.forEach((filePath) => {
   const keyName = filePath.split(rootPath)[1].slice(1);
