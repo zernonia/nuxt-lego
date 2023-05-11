@@ -39,11 +39,26 @@ Do let me know what component you have in mind that you are longing for ya!
 
 # Getting started
 
+## Install
+
+```bash
+npm install --save-dev nuxt-lego
+
+# Using yarn
+yarn add --dev nuxt-lego
+```
+
+Requires Nuxt >= 3.1.0.
+
+## Register Layer
+
+_nuxt.config.ts_
+
 ```ts
 export default defineNuxtConfig({
   extends: [
     ...,
-    "github:zernonia/nuxt-lego#alpha",    // Currently in Alpha stage
+    "nuxt-lego",
   ],
   alias: {
     "@vueuse/core": require.resolve("@vueuse/core/index.mjs"), // issue: https://github.com/nuxt/nuxt/issues/18448
