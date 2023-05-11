@@ -5,7 +5,12 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
     },
   },
-  modules: ["@unocss/nuxt", "@nuxt/content", "@nuxt/devtools"],
+  modules: [
+    "@unocss/nuxt",
+    "@nuxt/content",
+    "@nuxt/devtools",
+    "@nuxthq/studio",
+  ],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
   components: [{ path: "~/components", global: true }],
   content: {
