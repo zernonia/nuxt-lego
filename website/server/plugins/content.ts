@@ -4,13 +4,14 @@ import { readFileSync } from "fs";
 import { resolve } from "pathe";
 import glob from "fast-glob";
 
+const rootPath = resolve(".");
 const codeCache = new Map<string, string>();
 const codeFilePaths = [
   ...glob.sync(resolve("website/components/content", "*.vue")),
 ];
 
 codeFilePaths.forEach((filePath) => {
-  const keyName = filePath.split("nuxt-lego/")[1];
+  const keyName = filePath.split(rootPath)[1].slice(1);
   codeCache.set(keyName, readFileSync(filePath, "utf-8"));
 });
 
