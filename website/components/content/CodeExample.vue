@@ -21,7 +21,7 @@ const isPreview = ref(true);
     </button>
 
     <div>
-      <Demo v-show="isPreview" class="!mt-4">
+      <Demo v-show="isPreview">
         <slot name="preview" />
       </Demo>
 

@@ -27,7 +27,7 @@ useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
       </template>
 
       <LegoTocLinks v-slot="{ link }" class="ml-4" :links="links">
-        <div class="block my-2">
+        <div class="block my-2 hover:underline">
           {{ link.text }}
         </div>
       </LegoTocLinks>

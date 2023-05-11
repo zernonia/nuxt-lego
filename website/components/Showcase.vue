@@ -12,9 +12,7 @@
         </div>
       </template>
 
-      <h5 class="font-semibold">
-        Social Share
-      </h5>
+      <h5 class="font-semibold">Social Share</h5>
       <p class="text-sm mt-1 text-gray-400">
         Primitive component to allow easy sharing for different social media
         providers.
@@ -42,9 +40,7 @@
         </div>
       </template>
 
-      <h5 class="font-semibold">
-        Static Tweet
-      </h5>
+      <h5 class="font-semibold">Static Tweet</h5>
       <p class="text-sm mt-1 text-gray-400">
         Primitive component to render static tweet.
       </p>
@@ -58,9 +54,7 @@
           <div class="w-20 h-full bg-gray-100" />
 
           <div class="px-3 bg-white h-full flex flex-col justify-center">
-            <p class="text-xs font-semibold text-gray-300">
-              Title
-            </p>
+            <p class="text-xs font-semibold text-gray-300">Title</p>
             <p class="text-xs my-1 text-gray-300">
               Website's metadata description
             </p>
@@ -69,11 +63,9 @@
         </div>
       </template>
 
-      <h5 class="font-semibold">
-        Website Card
-      </h5>
+      <h5 class="font-semibold">Website Card</h5>
       <p class="text-sm mt-1 text-gray-400">
-        WIP
+        Render website card similar to Notion Bookmark.
       </p>
     </ShowcaseCard>
 
@@ -88,12 +80,8 @@
         </div>
       </template>
 
-      <h5 class="font-semibold">
-        Table of Contents
-      </h5>
-      <p class="text-sm mt-1 text-gray-400">
-        WIP
-      </p>
+      <h5 class="font-semibold">Table of Contents</h5>
+      <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
 
     <ShowcaseCard to="/docs/components/page-progress">
@@ -106,12 +94,8 @@
         </div>
       </template>
 
-      <h5 class="font-semibold">
-        Page progress
-      </h5>
-      <p class="text-sm mt-1 text-gray-400">
-        WIP
-      </p>
+      <h5 class="font-semibold">Page progress</h5>
+      <p class="text-sm mt-1 text-gray-400">WIP</p>
     </ShowcaseCard>
   </div>
 </template>

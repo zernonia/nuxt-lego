@@ -23,7 +23,12 @@ const tree = computed(() => {
       </h4>
 
       <div class="mt-2 text-sm flex flex-col space-y-1">
-        <NuxtLink v-for="item in child" :key="item.title" :to="item._path">
+        <NuxtLink
+          v-for="item in child"
+          :key="item.title"
+          class="hover:underline"
+          :to="item._path"
+        >
           {{ item.title }}
         </NuxtLink>
       </div>
