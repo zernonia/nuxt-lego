@@ -6,5 +6,7 @@ module.exports = {
     "vue/max-attributes-per-line": "off",
     "vue/no-template-shadow": "off",
     "vue/singleline-html-element-content-newline": "off",
+    "vue/no-v-html": "off",
+    "vue/no-v-text-v-html-on-component": "off",
   },
 };

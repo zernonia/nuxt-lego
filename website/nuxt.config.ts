@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
     },
   },
-  modules: ["@unocss/nuxt", "@nuxt/content"],
+  modules: ["@unocss/nuxt", "@nuxt/content", "@nuxt/devtools"],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
   content: {
     highlight: {

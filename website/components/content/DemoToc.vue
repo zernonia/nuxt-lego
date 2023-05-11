@@ -9,19 +9,15 @@ const links = computed(() => data.value?.body.toc.links);
 </script>
 
 <template>
-  <Demo>
-    <LegoToc class="bg-white border text-sm p-4 rounded-xl">
-      <template #title>
-        <div class="mx-4 mb-4 text-lg font-semibold">
-          Navigation
-        </div>
-      </template>
+  <LegoToc class="bg-white border text-sm p-4 rounded-xl">
+    <template #title>
+      <div class="mx-4 mb-4 text-lg font-semibold">Navigation</div>
+    </template>
 
-      <LegoTocLinks v-slot="{ link }" class="ml-4" :links="links">
-        <div class="block my-2 hover:underline">
-          {{ link.text }}
-        </div>
-      </LegoTocLinks>
-    </LegoToc>
-  </Demo>
+    <LegoTocLinks v-slot="{ link }" class="ml-4" :links="links">
+      <div class="block my-2 hover:underline">
+        {{ link.text }}
+      </div>
+    </LegoTocLinks>
+  </LegoToc>
 </template>
