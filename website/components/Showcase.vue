@@ -5,6 +5,7 @@
     <SocialShareShowcase />
     <StaticTweetShowcase />
     <WebsiteCardShowcase />
+    <AuthUiShowcase />
     <TocShowcase />
     <PageProgressShowcase />
   </div>
