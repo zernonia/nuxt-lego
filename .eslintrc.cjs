@@ -8,5 +8,6 @@ module.exports = {
     "vue/singleline-html-element-content-newline": "off",
     "vue/no-v-html": "off",
     "vue/no-v-text-v-html-on-component": "off",
+    "vue/html-self-closing": "off",
   },
 };
