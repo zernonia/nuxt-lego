@@ -19,5 +19,9 @@ defineProps<{
       class="text-blue-300 hover:text-blue-400 transition"
       :text="text"
     />
+    <LegoSocialShareReddit       
+      class="text-blue-300 hover:text-blue-400 transition"
+      :text="text"
+    />
   </LegoSocialShare>
 </template>
