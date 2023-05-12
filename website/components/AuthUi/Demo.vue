@@ -16,7 +16,7 @@ const handleSubmit = (payload: { [key: string]: any }) => {
   >
     <LegoAuthHeader>
       <template #logo>
-        <img src="/logo.svg" alt="NuxtLego" class="w-10" />
+        <img src="/logo.svg" alt="NuxtLego" class="w-10">
       </template>
 
       <h2 class="mt-4 font-semibold text-xl">Create your account</h2>
