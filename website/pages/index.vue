@@ -1,5 +1,9 @@
 <script setup lang="ts">
-useCustomHead("Primitives", "Ready made UI components with Nuxt layer.");
+useCustomHead({
+  title: "Primitives",
+  description: "Ready made UI components with Nuxt layer.",
+  image: "/og.png",
+});
 </script>
 
 <template>
