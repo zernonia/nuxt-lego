@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: [".."],
+  extends: ["..", "nuxt-seo-kit"],
   app: {
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
@@ -12,7 +12,10 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
   ],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
-  components: [{ path: "~/components", global: true }],
+  components: [
+    { path: "~/components", global: true },
+    { path: "~/components/islands", island: true },
+  ],
   content: {
     highlight: {
       theme: "github-light",
@@ -28,5 +31,15 @@ export default defineNuxtConfig({
   },
   unocss: {
     configFile: "~/uno.config.ts",
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL || "https://nuxt-lego.vercel.app",
+      titleSeparator: "|",
+      siteName: "NuxtLego",
+      siteDescription: "Ready made UI components with Nuxt layer.",
+      language: "en",
+    },
   },
 });
