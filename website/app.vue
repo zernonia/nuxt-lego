@@ -1,9 +1,4 @@
-<script setup lang="ts">
-defineOgImageStatic({
-  title: "Welcome to my site!",
-  background: "lightblue",
-});
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="text-gray-700 max-w-screen-xl mx-auto">

@@ -44,4 +44,7 @@ export default defineNuxtConfig({
       language: "en",
     },
   },
+  ogImage: {
+    fonts: ["Plus+Jakarta+Sans:400", "Plus+Jakarta+Sans:700"],
+  },
 });

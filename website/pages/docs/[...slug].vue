@@ -18,6 +18,7 @@ useCustomHead({
 defineOgImageStatic({
   component: "CustomOgImage",
   title: data.value?.title,
+  description: data.value?.description ?? "",
 });
 </script>
 
