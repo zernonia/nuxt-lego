@@ -6,7 +6,7 @@ export const useCustomHead = (
   } = {
     title: "",
     description: "",
-    image: "/og.png",
+    image: "https://nuxt-lego.vercel.app/og.png",
   }
 ) => {
   return useSeoMeta({
