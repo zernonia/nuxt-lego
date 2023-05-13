@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     rootDir: ".",
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      routes: ["/", "/docs"],
     },
   },
   unocss: {
@@ -35,7 +35,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl:
-        process.env.NUXT_PUBLIC_SITE_URL || "https://nuxt-lego.vercel.app",
+        process.env.NUXT_PUBLIC_SITE_URL ||
+        `https://${process.env.NUXT_ENV_VERCEL_URL}` ||
+        "https://nuxt-lego.vercel.app",
       titleSeparator: "|",
       siteName: "NuxtLego",
       siteDescription: "Ready made UI components with Nuxt layer.",
