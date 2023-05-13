@@ -6,11 +6,8 @@ const { data } = await useAsyncData(slug.value, () =>
 
 const links = computed(() => data.value?.body.toc.links);
 
-const {
-  public: { siteUrl },
-} = useRuntimeConfig();
 const image = computed(() => {
-  return `${siteUrl}/${useRoute().path}/__og_image__/og.png`;
+  return `/${useRoute().path}/__og_image__/og.png`;
 });
 useCustomHead({
   title: data.value?.title ?? "",

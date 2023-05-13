@@ -6,18 +6,22 @@ export const useCustomHead = (
   } = {
     title: "",
     description: "",
-    image: "https://nuxt-lego.vercel.app/og.png",
+    image: "/og.png",
   }
 ) => {
+  const {
+    public: { siteUrl },
+  } = useRuntimeConfig();
+  const image = computed(() => `${siteUrl}${data.image ?? ""}`);
+
   return useSeoMeta({
     title: () => data.title,
     description: () => data.description,
     ogTitle: () => data.title,
     ogDescription: () => data.description,
-    ogImage: () => data.image,
+    ogImage: () => image.value,
     twitterTitle: () => data.title,
     twitterDescription: () => data.description,
-    twitterImage: () => data.image,
-    twitterCard: "summary_large_image",
+    twitterImage: () => image.value,
   });
 };
