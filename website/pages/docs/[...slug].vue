@@ -6,7 +6,20 @@ const { data } = await useAsyncData(slug.value, () =>
 
 const links = computed(() => data.value?.body.toc.links);
 
-useCustomHead(data.value?.title ?? "", data.value?.description ?? "");
+const image = computed(() => {
+  return `/${useRoute().path}/__og_image__/og.png`;
+});
+useCustomHead({
+  title: data.value?.title ?? "",
+  description: data.value?.description ?? "",
+  image: image.value,
+});
+
+defineOgImageStatic({
+  component: "CustomOgImage",
+  title: data.value?.title,
+  description: data.value?.description ?? "",
+});
 </script>
 
 <template>
