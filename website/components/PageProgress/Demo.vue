@@ -6,9 +6,12 @@ const el = ref();
   <div class="relative">
     <LegoPageProgress v-slot="{ progress }" :target="el">
       <div
-        class="absolute -left-6 bottom-0 rounded-xl h-full w-2.5 bg-gray-100 overflow-hidden"
+        class="absolute -left-6 bottom-0 rounded-full h-full w-2.5 bg-gray-100 overflow-hidden"
       >
-        <div class="w-full bg-blue-300" :style="{ height: progress + '%' }" />
+        <div
+          class="w-full bg-blue-300 rounded-full"
+          :style="{ height: progress + '%' }"
+        />
       </div>
     </LegoPageProgress>
 
