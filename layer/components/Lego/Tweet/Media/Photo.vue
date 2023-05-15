@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MediaPhoto } from "lego/types";
-import { getMediaUrl } from "lego/utils/twitter";
+import { getMediaUrl } from "~/../layer/utils/twitter";
 
 defineProps<{
   media: MediaPhoto;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { h } from "vue";
 import key from "./.keys";
-import { getHashtagUrl, getUserUrl, getSymbolUrl } from "lego/utils/twitter";
+import { getHashtagUrl, getUserUrl, getSymbolUrl } from "~/../layer/utils/twitter";
 import LegoTweetLink from "./Link.vue";
 
 import type {

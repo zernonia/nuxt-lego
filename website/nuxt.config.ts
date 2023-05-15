@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: ["..", "nuxt-seo-kit"],
+  extends: ["../layer", "nuxt-seo-kit"],
   app: {
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],

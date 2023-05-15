@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import key from "./.keys";
-import { getTweetUrl } from "lego/utils/twitter";
+import { getTweetUrl } from "~/../layer/utils/twitter";
 
 const tweet = inject(key);
 const createdAt = computed(() =>
