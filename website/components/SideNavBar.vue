@@ -1,35 +1,25 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("nav", () =>
-  queryContent("/").only(["title", "_path", "_dir"]).find()
+const { data } = await useAsyncData("nav", () => fetchContentNavigation()
 );
 
-const tree = computed(() => {
-  return data.value?.reduce((result, currentObject) => {
-    const key = currentObject["_dir"];
-    if (!result[key]) {
-      result[key] = [];
-    }
-    result[key].push(currentObject);
-    return result;
-  }, {});
-});
+const navigation = computed(() => data.value?.[0].children)
 </script>
 
 <template>
   <div>
-    <div v-for="(child, key) of tree" :key="key" class="mb-6">
+    <div v-for="nav in navigation" :key="nav._id" class="mb-6">
       <h4 class="font-semibold text-lg capitalize">
-        {{ key }}
+        {{ nav.title }}
       </h4>
 
       <div class="mt-2 text-sm flex flex-col space-y-1">
         <NuxtLink
-          v-for="item in child"
-          :key="item.title"
+          v-for="child in nav.children"
+          :key="child.title"
           class="hover:underline"
-          :to="item._path"
+          :to="child._path"
         >
-          {{ item.title }}
+          {{ child.title }}
         </NuxtLink>
       </div>
     </div>
