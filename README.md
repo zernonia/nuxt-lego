@@ -68,30 +68,22 @@ export default defineNuxtConfig({
  
 # 🌎 Local Development
 
-## Prerequisites
+## Setup
 
-Yarn
+Make sure to install the dependencies:
 
-- ```sh
-  npm install --global yarn
-  ```
+```bash
+# pnpm
+pnpm install
+```
 
-## Development
+## Development Server
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/zernonia/nuxt-lego.git
-   ```
-2. Install NPM packages
+Start the development server on http://localhost:3000
 
-   ```sh
-   yarn install
-   ```
-
-3. Run Development instance
-   ```sh
-   yarn dev
-   ```
+```bash
+pnpm run dev
+```
 
 # ➕ Contributing
 
