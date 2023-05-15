@@ -18,7 +18,8 @@
     "preview": "nuxt preview website",
     "prepare": "nuxt prepare website",
     "lint": "eslint . --fix",
-    "release": "bumpp layer/package.json --commit --push --tag"
+    "release": "bumpp layer/package.json --commit --push --tag",
+    "pub": "cd layer && npm publish"
   },
   "devDependencies": {
     "@vueuse/core": "^10.1.0",
