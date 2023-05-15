@@ -17,8 +17,8 @@
     "generate": "nuxt generate website",
     "preview": "nuxt preview website",
     "prepare": "nuxt prepare website",
-    "lint": "eslint .",
-    "release": "bumpp package.json --commit --push --tag"
+    "lint": "eslint . --fix",
+    "release": "bumpp layer/package.json --commit --push --tag"
   },
   "devDependencies": {
     "@vueuse/core": "^10.1.0",
