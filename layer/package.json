@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-lego",
+  "type": "module",
+  "version": "0.0.5",
+  "description": "Unstyled components for building your Nuxt content quick & beautiful.",
+  "license": "MIT",
+  "homepage": "https://nuxt-lego.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zernonia/nuxt-lego.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zernonia/nuxt-lego/issues"
+  },
+  "main": "./nuxt.config.ts",
+  "files": [
+    "components",
+    "server",
+    "types",
+    "utils",
+    "nuxt.config.ts"
+  ],
+  "dependencies": {
+    "@vueuse/core": "^10.1.0",
+    "@vueuse/nuxt": "^10.1.0",
+    "nuxt-icon": "^0.4.0"
+  }
+}

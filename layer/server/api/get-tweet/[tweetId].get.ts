@@ -1,4 +1,4 @@
-import { Tweet } from "~/../types";
+import { Tweet } from "../../../types";
 
 export default defineEventHandler(async (event) => {
   const tweetId = event.context.params?.tweetId;
