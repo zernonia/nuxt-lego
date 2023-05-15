@@ -3,6 +3,9 @@ const slug = computed(() => useRoute().path);
 const { data } = await useAsyncData(slug.value, () =>
   queryContent(slug.value).findOne()
 );
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found!!' })
+}
 
 const links = computed(() => data.value?.body.toc.links);
 
