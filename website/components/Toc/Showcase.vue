@@ -13,6 +13,8 @@
     </template>
 
     <h5 class="font-semibold">Table of Contents</h5>
-    <p class="text-sm mt-1 text-gray-400">WIP</p>
+    <p class="text-sm mt-1 text-gray-400">
+      Primitive component to build your own table of content easily.
+    </p>
   </ShowcaseCard>
 </template>

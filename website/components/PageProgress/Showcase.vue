@@ -12,6 +12,8 @@
     </template>
 
     <h5 class="font-semibold">Page progress</h5>
-    <p class="text-sm mt-1 text-gray-400">WIP</p>
+    <p class="text-sm mt-1 text-gray-400">
+      Progress bar based on window scroll or element scroll.
+    </p>
   </ShowcaseCard>
 </template>
