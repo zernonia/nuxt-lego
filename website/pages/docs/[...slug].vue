@@ -45,7 +45,7 @@ defineOgImageStatic({
           <NuxtLink v-if="prev" :to="prev._path" class="flex items-center px-3 py-2.5 rounded-xl border w-max bg-white hover:bg-gray-100 transition">
             <Icon name="uil:angle-left-b" class="text-xl" />
             <div class="flex flex-col items-end px-2">
-              <span class="text-gray-400 text-sm">{{ prev._dir }}</span>
+              <span class="text-gray-400 text-xs">{{ prev._dir }}</span>
               <h5>{{ prev.title }}</h5>
             </div>
           </NuxtLink>
@@ -53,7 +53,7 @@ defineOgImageStatic({
         <div>
           <NuxtLink v-if="next" :to="next._path" class="flex items-center px-3 py-2.5 rounded-xl border w-max bg-white hover:bg-gray-100 transition">
             <div class="flex flex-col items-start px-2">
-              <span class="text-gray-400 text-sm">{{ next._dir }}</span>
+              <span class="text-gray-400 text-xs">{{ next._dir }}</span>
               <h5>{{ next.title }}</h5>
             </div>
             <Icon name="uil:angle-right-b" class="text-xl" />
