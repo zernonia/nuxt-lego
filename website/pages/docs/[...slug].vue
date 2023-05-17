@@ -6,6 +6,10 @@ const { data } = await useAsyncData(slug.value, () =>
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found!!' })
 }
+const [prev, next] = await queryContent()
+  .only(['_path', 'title', '_dir'])
+  .findSurround(slug.value)
+
 
 const links = computed(() => data.value?.body.toc.links);
 
@@ -33,6 +37,29 @@ defineOgImageStatic({
         {{ data.description }}
       </p>
       <ContentRenderer :value="data" />
+
+
+
+      <div class="mt-20 pt-8 border-t not-prose flex justify-between">
+        <div>
+          <NuxtLink v-if="prev" :to="prev._path" class="flex items-center px-3 py-2.5 rounded-xl border w-max bg-white hover:bg-gray-100 transition">
+            <Icon name="uil:angle-left-b" class="text-xl" />
+            <div class="flex flex-col items-end px-2">
+              <span class="text-gray-400 text-sm">{{ prev._dir }}</span>
+              <h5>{{ prev.title }}</h5>
+            </div>
+          </NuxtLink>
+        </div>
+        <div>
+          <NuxtLink v-if="next" :to="next._path" class="flex items-center px-3 py-2.5 rounded-xl border w-max bg-white hover:bg-gray-100 transition">
+            <div class="flex flex-col items-start px-2">
+              <span class="text-gray-400 text-sm">{{ next._dir }}</span>
+              <h5>{{ next.title }}</h5>
+            </div>
+            <Icon name="uil:angle-right-b" class="text-xl" />
+          </NuxtLink>
+        </div>
+      </div>
     </main>
 
     <LegoToc
