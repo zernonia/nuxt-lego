@@ -12,6 +12,9 @@ watch(
     isShowingMenu.value = false;
   }
 );
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -27,6 +30,9 @@ watch(
     </h1>
 
     <div class="flex items-center">
+      <button @click="toggleDark()">
+        Dark
+      </button>
       <NuxtLink to="https://github.com/zernonia/nuxt-lego" target="_blank">
         <Icon class="text-3xl" name="uil:github" />
       </NuxtLink>
@@ -48,7 +54,7 @@ watch(
     >
       <div
         v-if="isShowingMenu"
-        class="z-20 fixed top-16 left-0 bg-white bg-opacity-50 backdrop-blur-md w-screen h-screen overflow-y-auto"
+        class="z-20 fixed top-16 left-0 dark:bg-stone-900 bg-white bg-opacity-50 backdrop-blur-md w-screen h-screen overflow-y-auto"
         @click.self="isShowingMenu = false"
       >
         <div class="bg-white p-4 border-b rounded-b-xl">

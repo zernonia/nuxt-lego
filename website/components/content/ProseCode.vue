@@ -7,14 +7,14 @@ const props = defineProps<{
   meta?: string;
 }>();
 const { code } = toRefs(props);
-const { copy, copied } = useClipboard({ source: code });
+const { copy, copied } = useClipboard({ source: code.value });
 </script>
 
 <template>
-  <div class="group relative border rounded-xl bg-gray-100">
+  <div class="group relative border border-gray-200 dark:border-gray-700 rounded-xl bg-gray-100 dark:bg-gray-800">
     <div v-if="filename" class="mr-4 mt-4 md:mr-0 md:mt-0 flex justify-end">
       <samp
-        class="not-prose w-max md:absolute top-4 right-4 opacity-70 md:group-hover:opacity-0 transition text-xs px-2 py-1 bg-gray-200 rounded"
+        class="not-prose w-max md:absolute top-4 right-4 opacity-70 md:group-hover:opacity-0 transition text-xs px-2 py-1 bg-gray-200 dark:bg-gray-900 rounded"
       >
         {{ filename }}
       </samp>

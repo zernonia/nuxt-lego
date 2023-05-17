@@ -12,11 +12,11 @@
       Nuxt content quick & beautiful.
     </h2>
 
-    <NuxtLink
+    <UButton
       to="/docs/overview/getting-started"
-      class="block w-max mt-12 px-6 py-3 font-semibold rounded-lg border"
+      class="mt-4"
     >
       Install NuxtLego
-    </NuxtLink>
+    </UButton>
   </div>
 </template>
