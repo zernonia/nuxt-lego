@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/devtools",
     "@nuxthq/studio",
+    "@nuxthq/ui"
   ],
   css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
   components: [

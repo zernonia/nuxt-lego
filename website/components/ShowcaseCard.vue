@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <NuxtLink :to="to">
-    <div class="border rounded-xl overflow-hidden h-full">
+    <div class="border dark:border-gray-800 border-gray-200 rounded-xl overflow-hidden h-full">
       <div
         class="h-48 relative flex items-center justify-center bg-grid bg-no-repeat bg-cover"
       >
