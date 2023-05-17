@@ -6,9 +6,14 @@ const { data } = await useAsyncData(slug.value, () =>
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found!!' })
 }
-const [prev, next] = await queryContent()
-  .only(['_path', 'title', '_dir'])
-  .findSurround(slug.value)
+const { data: prevNext } = await useAsyncData(`${slug.value}-prev-next`, () => {
+  return queryContent()
+    .only(['_path', 'title', '_dir'])
+    .findSurround(slug.value)
+})
+const prev = prevNext.value?.[0]
+const next = prevNext.value?.[1]
+
 
 
 const links = computed(() => data.value?.body.toc.links);
