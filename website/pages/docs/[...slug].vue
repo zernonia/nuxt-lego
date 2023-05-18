@@ -42,7 +42,7 @@ defineOgImageStatic({
       <ContentRenderer :value="data" />
 
       <div class="py-12 border-b">
-        <NuxtLink target="_blank" class="hover:underline" :to="`https://github.com/zernonia/nuxt-lego/edit/main/website/content/${data._file}`">
+        <NuxtLink target="_blank" class="hover:underline" :to="`https://github.com/zernonia/nuxt-lego/tree/main/website/content/${data._file}`">
           <Icon name="uil:edit" />
           <span class="text-sm ml-2">Edit something here!</span>
         </NuxtLink>
