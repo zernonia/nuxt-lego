@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import key from "./.keys";
-import { getTweetUrl } from "~/../layer/utils/twitter";
+import key from './.keys'
+import { getTweetUrl } from '~/../layer/utils/twitter'
 
-const tweet = inject(key);
+const tweet = inject(key)
 const createdAt = computed(() =>
-  tweet?.value.created_at ? new Date(tweet.value.created_at) : undefined
-);
-const formatted = useDateFormat(createdAt, "h:mm a · MMM D, YYYY");
+  tweet?.value.created_at ? new Date(tweet.value.created_at) : undefined,
+)
+const formatted = useDateFormat(createdAt, 'h:mm a · MMM D, YYYY')
 </script>
 
 <template>

@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const tweet = inject(key);
-const card = computed(() => tweet?.value?.card);
+const tweet = inject(key)
+const card = computed(() => tweet?.value?.card)
 const isLargeSummaryCard = computed(
-  () => card.value?.name === "summary_large_image"
-);
+  () => card.value?.name === 'summary_large_image',
+)
 
 const image = computed(() =>
   isLargeSummaryCard.value
     ? card.value?.binding_values?.summary_photo_image?.image_value
-    : card.value?.binding_values?.thumbnail_image?.image_value
-);
+    : card.value?.binding_values?.thumbnail_image?.image_value,
+)
 const info = computed(() => ({
   domain: card.value?.binding_values.domain.string_value,
   title: card.value?.binding_values.title.string_value,
   description: card.value?.binding_values.description.string_value,
-}));
+}))
 </script>
 
 <template>

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const props = defineProps<{ text?: string }>();
+const props = defineProps<{ text?: string }>()
 
-const path = inject(key);
+const path = inject(key)
 const url = computed(
   () =>
     `https://twitter.com/intent/tweet?url=${encodeURI(
-      path?.value ?? ""
-    )}&text=${encodeURI(props.text ?? "")}`
-);
+      path?.value ?? '',
+    )}&text=${encodeURI(props.text ?? '')}`,
+)
 </script>
 
 <template>

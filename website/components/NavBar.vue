@@ -1,17 +1,18 @@
 <script setup lang="ts">
-const isShowingMenu = ref(false);
+const isShowingMenu = ref(false)
 
 watch(isShowingMenu, (n) => {
-  if (n) document.body.classList.add("overflow-y-hidden");
-  else document.body.classList.remove("overflow-y-hidden");
-});
+  if (n)
+    document.body.classList.add('overflow-y-hidden')
+  else document.body.classList.remove('overflow-y-hidden')
+})
 
 watch(
   () => useRoute().path,
   () => {
-    isShowingMenu.value = false;
-  }
-);
+    isShowingMenu.value = false
+  },
+)
 </script>
 
 <template>

@@ -6,7 +6,7 @@ import {
   presetUno,
   presetWebFonts,
   transformerDirectives,
-} from "unocss";
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: [
@@ -23,32 +23,32 @@ export default defineConfig({
     presetIcons(),
     presetTypography({
       cssExtend: {
-        "pre,code": {
+        'pre,code': {
           margin: 0,
         },
-        h1: {
-          "font-weight": "700",
+        'h1': {
+          'font-weight': '700',
         },
-        h2: {
-          "font-size": "1.5rem",
+        'h2': {
+          'font-size': '1.5rem',
         },
-        a: {
-          "text-decoration": "unset",
-          "font-weight": "unset",
-          color: "rgba(96,165,250,var(--un-text-opacity))",
+        'a': {
+          'text-decoration': 'unset',
+          'font-weight': 'unset',
+          'color': 'rgba(96,165,250,var(--un-text-opacity))',
         },
       },
     }),
     presetWebFonts({
-      provider: "google",
+      provider: 'google',
 
       fonts: {
         sans: {
-          name: "Plus Jakarta Sans",
-          weights: ["400", "500", "600", "700"],
+          name: 'Plus Jakarta Sans',
+          weights: ['400', '500', '600', '700'],
         },
       },
     }),
   ],
   transformers: [transformerDirectives()],
-});
+})

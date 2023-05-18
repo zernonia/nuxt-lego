@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("nav", () => fetchContentNavigation()
-);
+const { data } = await useAsyncData('nav', () => fetchContentNavigation(),
+)
 
 const navigation = computed(() => data.value?.[0].children)
 </script>

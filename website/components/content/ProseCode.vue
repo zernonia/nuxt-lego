@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-  code: string;
-  language?: string;
-  filename?: string;
-  higlights?: number[];
-  meta?: string;
-}>();
-const { code } = toRefs(props);
-const { copy, copied } = useClipboard({ source: code });
+  code: string
+  language?: string
+  filename?: string
+  higlights?: number[]
+  meta?: string
+}>()
+const { code } = toRefs(props)
+const { copy, copied } = useClipboard({ source: code })
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ url: string }>();
+defineProps<{ url: string }>()
 </script>
 
 <template>

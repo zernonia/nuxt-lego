@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import type { InputHTMLAttributes } from "vue";
+import type { InputHTMLAttributes } from 'vue'
 
-interface Props extends  /* @vue-ignore */ InputHTMLAttributes {
-  label: string;
-  name: string;
-  type: string;
+interface Props extends /* @vue-ignore */ InputHTMLAttributes {
+  label: string
+  name: string
+  type: string
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
+
 <script lang="ts">
 export default {
   inheritAttrs: false,
-};
+}
 </script>
 
 <template>

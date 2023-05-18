@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const tweet = inject(key);
-const mediaDetails = computed(() => tweet?.value?.mediaDetails ?? []);
+const tweet = inject(key)
+const mediaDetails = computed(() => tweet?.value?.mediaDetails ?? [])
 
 const gridClass = computed(() => {
-  const length = mediaDetails.value.length;
-  if (length >= 4) return "grid-2x2";
-  else if (length === 3) return "grid-3";
-  else if (length > 1) return "grid-2-columns";
-  else return;
-});
+  const length = mediaDetails.value.length
+  if (length >= 4)
+    return 'grid-2x2'
+  else if (length === 3)
+    return 'grid-3'
+  else if (length > 1)
+    return 'grid-2-columns'
+})
 </script>
 
 <template>

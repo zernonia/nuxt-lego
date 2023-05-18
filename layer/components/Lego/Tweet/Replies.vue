@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import key from "./.keys";
-import { getTweetUrl, formatNumber } from "~/../layer/utils/twitter";
+import key from './.keys'
+import { formatNumber, getTweetUrl } from '~/../layer/utils/twitter'
 
-const tweet = inject(key);
+const tweet = inject(key)
 </script>
 
 <template>

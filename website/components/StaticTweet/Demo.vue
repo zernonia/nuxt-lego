@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ id: string }>();
+defineProps<{ id: string }>()
 </script>
 
 <template>
@@ -18,7 +18,9 @@ defineProps<{ id: string }>();
             <p class="font-semibold leading-5">
               {{ user.name }}
             </p>
-            <p class="text-gray-400">@{{ user.screen_name }}</p>
+            <p class="text-gray-400">
+              @{{ user.screen_name }}
+            </p>
           </div>
         </div>
       </LegoTweetUser>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import key from "../.keys";
-import { copiedKey } from "./.keys";
+import key from '../.keys'
+import { copiedKey } from './.keys'
 
-const tweet = inject(key);
+const tweet = inject(key)
 
-const tweetUrl = computed(() => (tweet?.value ? getTweetUrl(tweet.value) : ""));
-const { copy, copied } = useClipboard({ source: tweetUrl });
+const tweetUrl = computed(() => (tweet?.value ? getTweetUrl(tweet.value) : ''))
+const { copy, copied } = useClipboard({ source: tweetUrl })
 
-provide(copiedKey, copied);
+provide(copiedKey, copied)
 </script>
 
 <template>
