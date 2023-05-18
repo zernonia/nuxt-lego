@@ -1,3 +1,11 @@
+<script setup lang="ts">
+defineProps<{
+  error: { message: string }
+}>()
+
+const handleError = () => clearError({ redirect: '/' })
+</script>
+
 <template>
   <div class="w-full">
     <div class="my-32 flex flex-col items-center justify-center ">
@@ -12,11 +20,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-defineProps<{
-  error: { message: string }
-}>()
-
-const handleError = () => clearError({ redirect: '/' })
-</script>

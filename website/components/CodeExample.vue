@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const isPreview = ref(true);
+const isPreview = ref(true)
 </script>
 
 <template>

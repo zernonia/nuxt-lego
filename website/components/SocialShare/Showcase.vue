@@ -12,7 +12,9 @@
       </div>
     </template>
 
-    <h5 class="font-semibold">Social Share</h5>
+    <h5 class="font-semibold">
+      Social Share
+    </h5>
     <p class="text-sm mt-1 text-gray-400">
       Primitive component to allow easy sharing for different social media
       providers.

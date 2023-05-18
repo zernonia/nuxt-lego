@@ -48,8 +48,8 @@ _nuxt.config.ts_
 
 ```ts
 export default defineNuxtConfig({
-  extends: ["nuxt-lego"],
-});
+  extends: ['nuxt-lego'],
+})
 ```
 
 # 🌎 Local Development

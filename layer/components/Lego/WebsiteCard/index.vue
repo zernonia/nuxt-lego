@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
 const props = defineProps<{
-  url: string;
-}>();
+  url: string
+}>()
 
-const { data, error, pending } = useFetch("/api/get-metatags", {
-  method: "POST",
+const { data, error, pending } = useFetch('/api/get-metatags', {
+  method: 'POST',
   body: {
     url: props.url,
   },
-});
-provide(key, data);
+})
+provide(key, data)
 </script>
 
 <template>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { copiedKey } from "./.keys";
+import { copiedKey } from './.keys'
 
-const copied = inject(copiedKey, ref(false));
+const copied = inject(copiedKey, ref(false))
 </script>
 
 <script lang="ts">
 export default {
   inheritAttrs: false,
-};
+}
 </script>
 
 <template>

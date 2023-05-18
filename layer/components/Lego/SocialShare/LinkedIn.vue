@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import key from "./.keys";
-const path = inject(key);
+import key from './.keys'
 
-const props = defineProps<{ text?: string }>();
+const props = defineProps<{ text?: string }>()
+
+const path = inject(key)
 
 const url = computed(
   () =>
     `https://www.linkedin.com/shareArticle/?mini=true&url=${encodeURI(
-      path?.value ?? ""
-    )}&title=${encodeURI(props.text ?? "")}`
-);
+      path?.value ?? '',
+    )}&title=${encodeURI(props.text ?? '')}`,
+)
 </script>
 
 <template>
