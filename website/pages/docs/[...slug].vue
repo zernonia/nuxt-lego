@@ -41,7 +41,14 @@ defineOgImageStatic({
       </p>
       <ContentRenderer :value="data" />
 
-      <div class="mt-20 pt-8 border-t not-prose flex flex-col sm:flex-row justify-between">
+      <div class="py-12 border-b">
+        <NuxtLink target="_blank" class="hover:underline" :to="`https://github.com/zernonia/nuxt-lego/tree/main/website/content/${data._file}`">
+          <Icon name="uil:edit" />
+          <span class="text-sm ml-2">Edit something here!</span>
+        </NuxtLink>
+      </div>
+
+      <div class="pt-8  not-prose flex flex-col sm:flex-row justify-between">
         <div>
           <NuxtLink v-if="prev" :to="prev._path" class="flex items-center px-3 py-2.5 rounded-xl border sm:w-max bg-white hover:bg-gray-100 transition">
             <Icon name="uil:angle-left-b" class="text-xl" />
