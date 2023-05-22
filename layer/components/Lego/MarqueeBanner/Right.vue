@@ -13,7 +13,7 @@ const el = ref<HTMLElement[]>()
 const offset = ref(rootInject.width.value)
 const intervalId = ref()
 
-const { componentsWidth, baseEl, shadowEl, shadowCount, isHovering, onMouseEnter, onMouseLeave } = useMarqueeBanner(el)
+const { componentsWidth, baseEl, shadowEl, isHovering, onMouseEnter, onMouseLeave } = useMarqueeBanner(el)
 
 onMounted(() => {
   intervalId.value = setInterval(() => {
@@ -28,7 +28,7 @@ onMounted(() => {
       else
         offset.value += rootInject.speed
     }
-  }, 10)
+  }, 5)
 })
 
 onUnmounted(() => {
@@ -37,7 +37,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div style="display: flex; position: relative; " :style="{ transform: `translateX(${offset}px)`, right: `${(componentsWidth * (shadowCount + 1))}px` }" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div style="display: flex; position: relative;  float: right" :style="{ transform: `translateX(${offset}px)` }" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <component :is="component" v-for="(component, index) in shadowEl" :key="index" />
     <component :is="component" v-for="(component, index) in baseEl" ref="el" :key="index" />
   </div>
