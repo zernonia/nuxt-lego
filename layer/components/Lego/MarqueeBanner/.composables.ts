@@ -17,7 +17,7 @@ export const useMarqueeBanner = (el: Ref<HTMLElement[] | undefined>) => {
   }).reduce((prev, curr) => prev + curr, 0) ?? 0)
 
   const baseEl = computed(() => slots.default?.())
-  const shadowCount = computed(() => componentsWidth.value !== 0 ? Math.ceil(rootInject.width.value / componentsWidth.value) : 2)
+  const shadowCount = computed(() => componentsWidth.value !== 0 ? Math.ceil(rootInject.width.value / componentsWidth.value) + 1 : 2)
   const shadowEl = computed(() => {
     return Array.from(Array(shadowCount.value).keys()).map(() => slots.default?.()).flat()
   })
