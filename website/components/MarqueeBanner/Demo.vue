@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <LegoMarqueeBanner :speed="0.5" :hovered-speed="0.25" class="w-96 md:w-120 text-xl">
+  <LegoMarqueeBanner :speed="0.5" :hovered-speed="0.25" class="w-96 md:w-144 text-xl">
     <LegoMarqueeBannerLeft class="my-2">
       <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
         Vue
