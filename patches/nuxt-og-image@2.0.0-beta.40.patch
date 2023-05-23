@@ -1,0 +1,15 @@
+diff --git a/dist/module.mjs b/dist/module.mjs
+index c2e2aae9f2871d0e4ac47cb8107ed6d97b2d841f..b3d5ab36956fe143d7e55f9e23d92b1a3bf456ce 100644
+--- a/dist/module.mjs
++++ b/dist/module.mjs
+@@ -534,8 +534,8 @@ export default async function() {
+ `;
+       }
+       nitroConfig.virtual["#nuxt-og-image/provider"] = `
+-${config.runtimeSatori ? `import satori from '${relative(nuxt.options.rootDir, resolve("./runtime/nitro/renderers/satori"))}'` : ""}
+-${config.runtimeBrowser ? `import browser from '${relative(nuxt.options.rootDir, resolve("./runtime/nitro/renderers/browser"))}'` : ""}
++${config.runtimeSatori ? `import satori from '${relative(nuxt.options.nitro.rootDir, resolve("./runtime/nitro/renderers/satori"))}'` : ""}
++${config.runtimeBrowser ? `import browser from '${relative(nuxt.options.nitro.rootDir, resolve("./runtime/nitro/renderers/browser"))}'` : ""}
+ 
+ export async function useProvider(provider) {
+   if (provider === 'satori')
