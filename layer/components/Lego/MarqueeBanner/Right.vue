@@ -4,21 +4,20 @@ import { rootKey } from './.keys'
 import { useMarqueeBanner } from './.composables'
 
 const rootInject = inject(rootKey, {
-  width: ref(0),
   speed: 1,
   hoveredSpeed: 0.5,
 })
 
 const el = ref<HTMLElement[]>()
-const offset = ref(rootInject.width.value)
+const offset = ref(0)
 const intervalId = ref()
 
 const { componentsWidth, baseEl, shadowEl, isHovering, onMouseEnter, onMouseLeave } = useMarqueeBanner(el)
 
 onMounted(() => {
   intervalId.value = setInterval(() => {
-    if (Math.abs(offset.value) >= (componentsWidth.value + rootInject.width.value)) {
-      offset.value = rootInject.width.value
+    if (Math.abs(offset.value) >= (componentsWidth.value)) {
+      offset.value = 0
     }
 
     else {
