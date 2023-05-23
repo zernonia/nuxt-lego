@@ -16,10 +16,12 @@ const navigation = computed(() => data.value?.[0].children)
         <NuxtLink
           v-for="child in nav.children"
           :key="child.title"
-          class="hover:underline"
+          class="hover:underline inline-flex items-center"
           :to="child._path"
         >
           {{ child.title }}
+
+          <span v-if="child.new" class="text-[0.65rem] px-1.5 ml-1 h-4 flex items-center rounded-full bg-blue-50 text-blue-400">New</span>
         </NuxtLink>
       </div>
     </div>
