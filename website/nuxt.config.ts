@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       theme: 'github-light',
       preload: ['vue', 'ts'],
     },
+    navigation: {
+      fields: ['new'],
+    },
   },
   nitro: {
     rootDir: '.',

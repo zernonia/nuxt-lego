@@ -17,7 +17,7 @@ const next = prevNext.value?.[1]
 const links = computed(() => data.value?.body.toc.links)
 
 const image = computed(() => {
-  return `/${useRoute().path}/__og_image__/og.png`
+  return `${useRoute().path}/__og_image__/og.png`
 })
 useCustomHead({
   title: data.value?.title ?? '',
