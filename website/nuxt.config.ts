@@ -47,6 +47,7 @@ export default defineNuxtConfig({
       language: 'en',
       umamiHost: '',
       umamiId: '',
+      umamiDomains: '',
     },
   },
   ogImage: {
