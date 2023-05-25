@@ -1,5 +1,12 @@
-import { inject } from '@vercel/analytics'
+export default defineNuxtPlugin((nuxtApp) => {
+  const cfg = useRuntimeConfig()
+  if (process.dev)
+    return
 
-export default () => {
-  inject()
-}
+  const node = document.createElement('script')
+  node.async = true
+  node.src = `${cfg.public.umamiHost}/script.js`
+  node.setAttribute('data-website-id', cfg.public.umamiId)
+
+  document.body.appendChild(node)
+})

@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: ['../layer', 'nuxt-seo-kit', 'nuxt-umami'],
+  extends: ['../layer', 'nuxt-seo-kit'],
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg', href: '/logo.svg' }],
@@ -45,6 +45,8 @@ export default defineNuxtConfig({
       siteName: 'NuxtLego',
       siteDescription: 'Ready made UI components with Nuxt layer.',
       language: 'en',
+      umamiHost: '',
+      umamiId: '',
     },
   },
   ogImage: {
