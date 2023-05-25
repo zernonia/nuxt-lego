@@ -45,6 +45,9 @@ export default defineNuxtConfig({
       siteName: 'NuxtLego',
       siteDescription: 'Ready made UI components with Nuxt layer.',
       language: 'en',
+      umamiHost: '',
+      umamiId: '',
+      umamiDomains: '',
     },
   },
   ogImage: {
