@@ -40,17 +40,21 @@ defineOgImageStatic({
         {{ data.description }}
       </p>
       <ContentRenderer :value="data" />
-
       <div class="py-12 border-b">
-        <NuxtLink target="_blank" class="hover:underline" :to="`https://github.com/zernonia/nuxt-lego/tree/main/website/content/${data._file}`">
+        <NuxtLink
+          target="_blank" class="hover:underline"
+          :to="`https://github.com/zernonia/nuxt-lego/tree/main/website/content/${data._file}`"
+        >
           <Icon name="uil:edit" />
           <span class="text-sm ml-2">Edit something here!</span>
         </NuxtLink>
       </div>
-
       <div class="pt-8  not-prose flex flex-col sm:flex-row justify-between">
         <div>
-          <NuxtLink v-if="prev" :to="prev._path" class="flex items-center px-3 py-2.5 rounded-xl border sm:w-max bg-white hover:bg-gray-100 transition">
+          <NuxtLink
+            v-if="prev" :to="prev._path"
+            class="flex items-center px-3 py-2.5 rounded-xl border sm:w-max bg-white hover:bg-gray-100 transition"
+          >
             <Icon name="uil:angle-left-b" class="text-xl" />
             <div class="flex flex-col items-end px-2">
               <span class="capitalize text-gray-400 text-xs">{{ prev._dir }}</span>
@@ -59,7 +63,10 @@ defineOgImageStatic({
           </NuxtLink>
         </div>
         <div class="mt-4 sm:mt-0">
-          <NuxtLink v-if="next" :to="next._path" class="flex items-center justify-end px-3 py-2.5 rounded-xl border sm:w-max bg-white hover:bg-gray-100 transition">
+          <NuxtLink
+            v-if="next" :to="next._path"
+            class="flex items-center justify-end px-3 py-2.5 rounded-xl border sm:w-max bg-white hover:bg-gray-100 transition"
+          >
             <div class="flex flex-col items-start px-2">
               <span class="capitalize text-gray-400 text-xs">{{ next._dir }}</span>
               <h5>{{ next.title }}</h5>
@@ -69,16 +76,12 @@ defineOgImageStatic({
         </div>
       </div>
     </main>
-
-    <LegoToc
-      class="hidden lg:block text-sm p-4 w-44 h-max sticky top-21 shrink-0"
-    >
+    <LegoToc class="hidden lg:block text-sm p-4 w-44 h-max sticky top-21 shrink-0">
       <template #title>
         <div class="ml-4 mb-4 text-xl font-semibold">
           Quick Nav
         </div>
       </template>
-
       <LegoTocLinks v-slot="{ link }" class="ml-4" :links="links">
         <div class="block my-2 hover:underline">
           {{ link.text }}
