@@ -12,11 +12,20 @@
       Nuxt content quick & beautiful.
     </h2>
 
-    <NuxtLink
-      to="/docs/overview/getting-started"
-      class="block w-max mt-12 px-6 py-3 font-semibold rounded-lg border"
-    >
-      Install NuxtLego
-    </NuxtLink>
+    <div class=" mt-12 flex items-center space-x-4">
+      <NuxtLink
+        to="/docs/overview/getting-started"
+        class="block w-max px-6 py-3 font-semibold bg-blue-300 hover:bg-blue-400 transition text-white rounded-lg border"
+      >
+        Install NuxtLego
+      </NuxtLink>
+
+      <NuxtLink
+        to="/blueprints"
+        class="block w-max px-6 py-3 bg-white hover:bg-gray-100 transition text-gray-600 font-semibold rounded-lg border"
+      >
+        Blueprint
+      </NuxtLink>
+    </div>
   </div>
 </template>
