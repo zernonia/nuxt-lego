@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const path = inject(key);
+const path = inject(key)
 
-const { copy } = useClipboard({ source: path });
+const { copy } = useClipboard({ source: path })
 </script>
 
 <template>

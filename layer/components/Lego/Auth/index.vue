@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { rootKey } from "./.keys";
-import type { Provider } from "./.types";
+import { rootKey } from './.keys'
+import type { Provider } from './.types'
 
 const props = defineProps<{
-  hideProviderLabel?: boolean;
-  providers?: Provider[];
-}>();
+  hideProviderLabel?: boolean
+  providers?: Provider[]
+}>()
 
-provide(rootKey, props);
+provide(rootKey, props)
 </script>
 
 <template>

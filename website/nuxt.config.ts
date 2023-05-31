@@ -1,50 +1,56 @@
 export default defineNuxtConfig({
-  extends: ["../layer", "nuxt-seo-kit"],
+  extends: ['../layer', 'nuxt-seo-kit'],
   app: {
     head: {
-      link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
+      link: [{ rel: 'icon', type: 'image/svg', href: '/logo.svg' }],
     },
   },
   modules: [
-    "@unocss/nuxt",
-    "@nuxt/content",
-    "@nuxt/devtools",
-    "@nuxthq/studio",
+    '@unocss/nuxt',
+    '@nuxt/content',
+    '@nuxt/devtools',
+    '@nuxthq/studio',
   ],
-  css: ["@unocss/reset/tailwind.css", "~/assets/css/main.css"],
+  css: ['@unocss/reset/tailwind.css', '~/assets/css/main.css'],
   components: [
-    { path: "~/components", global: true },
-    { path: "~/components/islands", island: true },
+    { path: '~/components', global: true },
+    { path: '~/components/islands', island: true },
   ],
   content: {
     highlight: {
-      theme: "github-light",
-      preload: ["vue", "ts"],
+      theme: 'github-light',
+      preload: ['vue', 'ts'],
+    },
+    navigation: {
+      fields: ['new'],
     },
   },
   nitro: {
-    rootDir: ".",
+    rootDir: '.',
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/docs"],
+      routes: ['/', '/docs'],
     },
   },
   unocss: {
-    configFile: "~/uno.config.ts",
+    configFile: '~/uno.config.ts',
   },
   runtimeConfig: {
     public: {
       siteUrl:
-        process.env.NUXT_PUBLIC_SITE_URL ||
-        `https://${process.env.NUXT_ENV_VERCEL_URL}` ||
-        "https://nuxt-lego.vercel.app",
-      titleSeparator: "|",
-      siteName: "NuxtLego",
-      siteDescription: "Ready made UI components with Nuxt layer.",
-      language: "en",
+        process.env.NUXT_PUBLIC_SITE_URL
+        || `https://${process.env.NUXT_ENV_VERCEL_URL}`
+        || 'https://nuxt-lego.vercel.app',
+      titleSeparator: '|',
+      siteName: 'NuxtLego',
+      siteDescription: 'Ready made UI components with Nuxt layer.',
+      language: 'en',
+      umamiHost: '',
+      umamiId: '',
+      umamiDomains: '',
     },
   },
   ogImage: {
-    fonts: ["Plus+Jakarta+Sans:400", "Plus+Jakarta+Sans:700"],
+    fonts: ['Plus+Jakarta+Sans:400', 'Plus+Jakarta+Sans:700'],
   },
-});
+})

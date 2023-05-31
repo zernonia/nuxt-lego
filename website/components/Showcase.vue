@@ -8,5 +8,6 @@
     <AuthUiShowcase />
     <TocShowcase />
     <PageProgressShowcase />
+    <MarqueeBannerShowcase />
   </div>
 </template>

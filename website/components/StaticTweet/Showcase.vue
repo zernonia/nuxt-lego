@@ -22,7 +22,9 @@
       </div>
     </template>
 
-    <h5 class="font-semibold">Static Tweet</h5>
+    <h5 class="font-semibold">
+      Static Tweet
+    </h5>
     <p class="text-sm mt-1 text-gray-400">
       Primitive component to render static tweet.
     </p>

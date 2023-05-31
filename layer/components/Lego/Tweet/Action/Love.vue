@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import key from "../.keys";
-import { getLikeUrl } from "~/../layer/utils/twitter";
+import key from '../.keys'
+import { getLikeUrl } from '~/../layer/utils/twitter'
 
-const tweet = inject(key);
+const tweet = inject(key)
 
 const favoriteCount = computed(() =>
-  tweet?.value.favorite_count ? formatNumber(tweet?.value.favorite_count) : 0
-);
+  tweet?.value.favorite_count ? formatNumber(tweet?.value.favorite_count) : 0,
+)
 </script>
 
 <template>

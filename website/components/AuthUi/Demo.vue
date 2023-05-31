@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const handleSelectProvider = (provider: string) => {
+function handleSelectProvider(provider: string) {
   // return the selected provider
-};
+}
 
-const handleSubmit = (payload: { [key: string]: any }) => {
+function handleSubmit(payload: { [key: string]: any }) {
   // in this case payload will return { email: string, password: string }
-};
+}
 </script>
 
 <template>
@@ -19,8 +19,12 @@ const handleSubmit = (payload: { [key: string]: any }) => {
         <img src="/logo.svg" alt="NuxtLego" class="w-10">
       </template>
 
-      <h2 class="mt-4 font-semibold text-xl">Create your account</h2>
-      <p class="text-gray-400 text-sm mt-1">to continue to NuxtLego</p>
+      <h2 class="mt-4 font-semibold text-xl">
+        Create your account
+      </h2>
+      <p class="text-gray-400 text-sm mt-1">
+        to continue to NuxtLego
+      </p>
     </LegoAuthHeader>
 
     <div class="flex space-x-2 w-full mt-8">

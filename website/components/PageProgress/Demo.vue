@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const el = ref();
+const el = ref()
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const el = ref();
       >
         <div
           class="w-full bg-blue-300 rounded-full"
-          :style="{ height: progress + '%' }"
+          :style="{ height: `${progress}%` }"
         />
       </div>
     </LegoPageProgress>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const tweet = inject(key);
-const user = computed(() => tweet?.value?.user);
+const tweet = inject(key)
+const user = computed(() => tweet?.value?.user)
 </script>
 
 <template>

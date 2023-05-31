@@ -1,235 +1,235 @@
 interface TweetEditControl {
-  edit_tweet_ids: string[];
-  editable_until_msecs: string;
-  is_edit_eligible: boolean;
-  edits_remaining: string;
+  edit_tweet_ids: string[]
+  editable_until_msecs: string
+  is_edit_eligible: boolean
+  edits_remaining: string
 }
 
-export type Indices = [number, number];
+export type Indices = [number, number]
 
 export interface HashtagEntity {
-  indices: Indices;
-  text: string;
+  indices: Indices
+  text: string
 }
 
 export interface UserMentionEntity {
-  id_str: string;
-  indices: Indices;
-  name: string;
-  screen_name: string;
+  id_str: string
+  indices: Indices
+  name: string
+  screen_name: string
 }
 
 export interface MediaEntity {
-  display_url: string;
-  expanded_url: string;
-  indices: Indices;
-  url: string;
+  display_url: string
+  expanded_url: string
+  indices: Indices
+  url: string
 }
 
 export interface UrlEntity {
-  display_url: string;
-  expanded_url: string;
-  indices: Indices;
-  url: string;
+  display_url: string
+  expanded_url: string
+  indices: Indices
+  url: string
 }
 
 export interface SymbolEntity {
-  indices: Indices;
-  text: string;
+  indices: Indices
+  text: string
 }
 
 export interface TweetEntities {
-  hashtags: HashtagEntity[];
-  urls: UrlEntity[];
-  user_mentions: UserMentionEntity[];
-  symbols: SymbolEntity[];
-  media?: MediaEntity[];
+  hashtags: HashtagEntity[]
+  urls: UrlEntity[]
+  user_mentions: UserMentionEntity[]
+  symbols: SymbolEntity[]
+  media?: MediaEntity[]
 }
 
-type RGB = {
-  red: number;
-  green: number;
-  blue: number;
-};
+interface RGB {
+  red: number
+  green: number
+  blue: number
+}
 
-type Rect = {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-};
+interface Rect {
+  x: number
+  y: number
+  w: number
+  h: number
+}
 
-type Size = {
-  h: number;
-  w: number;
-  resize: string;
-};
+interface Size {
+  h: number
+  w: number
+  resize: string
+}
 
 interface VideoInfo {
-  aspect_ratio: [number, number];
+  aspect_ratio: [number, number]
   variants: {
-    bitrate?: number;
-    content_type: "video/mp4" | "application/x-mpegURL";
-    url: string;
-  }[];
+    bitrate?: number
+    content_type: 'video/mp4' | 'application/x-mpegURL'
+    url: string
+  }[]
 }
 
 interface MediaBase {
-  display_url: string;
-  expanded_url: string;
+  display_url: string
+  expanded_url: string
   ext_media_availability: {
-    status: string;
-  };
+    status: string
+  }
   ext_media_color: {
     palette: {
-      percentage: number;
-      rgb: RGB;
-    }[];
-  };
-  indices: Indices;
-  media_url_https: string;
+      percentage: number
+      rgb: RGB
+    }[]
+  }
+  indices: Indices
+  media_url_https: string
   original_info: {
-    height: number;
-    width: number;
-    focus_rects: Rect[];
-  };
+    height: number
+    width: number
+    focus_rects: Rect[]
+  }
   sizes: {
-    large: Size;
-    medium: Size;
-    small: Size;
-    thumb: Size;
-  };
-  url: string;
+    large: Size
+    medium: Size
+    small: Size
+    thumb: Size
+  }
+  url: string
 }
 
 export interface MediaPhoto extends MediaBase {
-  type: "photo";
-  ext_alt_text?: string;
+  type: 'photo'
+  ext_alt_text?: string
 }
 
 export interface MediaAnimatedGif extends MediaBase {
-  type: "animated_gif";
-  video_info: VideoInfo;
+  type: 'animated_gif'
+  video_info: VideoInfo
 }
 
 export interface MediaVideo extends MediaBase {
-  type: "video";
-  video_info: VideoInfo;
+  type: 'video'
+  video_info: VideoInfo
 }
 
-export type MediaDetails = MediaPhoto | MediaAnimatedGif | MediaVideo;
+export type MediaDetails = MediaPhoto | MediaAnimatedGif | MediaVideo
 
 interface TweetUser {
-  id_str: string;
-  name: string;
-  profile_image_url_https: string;
-  screen_name: string;
-  verified: boolean;
-  verified_type: string;
-  is_blue_verified: boolean;
-  profile_image_shape: "Circle" | "Square";
+  id_str: string
+  name: string
+  profile_image_url_https: string
+  screen_name: string
+  verified: boolean
+  verified_type: string
+  is_blue_verified: boolean
+  profile_image_shape: 'Circle' | 'Square'
 }
 
 interface TweetVideo {
-  aspectRatio: [number, number];
-  contentType: string;
-  durationMs: number;
+  aspectRatio: [number, number]
+  contentType: string
+  durationMs: number
   mediaAvailability: {
-    status: string;
-  };
-  poster: string;
+    status: string
+  }
+  poster: string
   variants: {
-    type: string;
-    src: string;
-  }[];
+    type: string
+    src: string
+  }[]
   videoId: {
-    type: string;
-    id: string;
-  };
-  viewCount: number;
+    type: string
+    id: string
+  }
+  viewCount: number
 }
 
 interface TweetPhoto {
-  backgroundColor: RGB;
-  cropCandidates: Rect[];
-  expandedUrl: string;
-  url: string;
-  width: number;
-  height: number;
+  backgroundColor: RGB
+  cropCandidates: Rect[]
+  expandedUrl: string
+  url: string
+  width: number
+  height: number
 }
 
 interface TweetBase {
-  lang: string;
-  created_at: string;
-  display_text_range: Indices;
-  entities: TweetEntities;
-  id_str: string;
-  text: string;
-  user: TweetUser;
-  edit_control: TweetEditControl;
-  card: TweetCard;
-  isEdited: boolean;
-  isStaleEdit: boolean;
+  lang: string
+  created_at: string
+  display_text_range: Indices
+  entities: TweetEntities
+  id_str: string
+  text: string
+  user: TweetUser
+  edit_control: TweetEditControl
+  card: TweetCard
+  isEdited: boolean
+  isStaleEdit: boolean
 }
 
 export interface Tweet extends TweetBase {
-  __typename: "Tweet";
-  favorite_count: number;
-  mediaDetails?: MediaDetails[];
-  photos?: TweetPhoto[];
-  video?: TweetVideo;
-  conversation_count: number;
-  news_action_type: "conversation";
-  quoted_tweet?: QuotedTweet;
-  in_reply_to_screen_name?: string;
-  in_reply_to_status_id_str?: string;
-  in_reply_to_user_id_str?: string;
-  parent?: TweetParent;
-  possibly_sensitive?: boolean;
+  __typename: 'Tweet'
+  favorite_count: number
+  mediaDetails?: MediaDetails[]
+  photos?: TweetPhoto[]
+  video?: TweetVideo
+  conversation_count: number
+  news_action_type: 'conversation'
+  quoted_tweet?: QuotedTweet
+  in_reply_to_screen_name?: string
+  in_reply_to_status_id_str?: string
+  in_reply_to_user_id_str?: string
+  parent?: TweetParent
+  possibly_sensitive?: boolean
 }
 
 interface TweetParent extends TweetBase {
-  reply_count: number;
-  retweet_count: number;
-  favorite_count: number;
+  reply_count: number
+  retweet_count: number
+  favorite_count: number
 }
 
 interface QuotedTweet extends TweetBase {
-  reply_count: number;
-  retweet_count: number;
-  favorite_count: number;
+  reply_count: number
+  retweet_count: number
+  favorite_count: number
   self_thread: {
-    id_str: string;
-  };
+    id_str: string
+  }
 }
 
 interface TweetCardBindingValuesBase {
-  string_value: string;
-  type: "STRING";
+  string_value: string
+  type: 'STRING'
 }
 
 interface TweetCardBindingValues {
-  title: TweetCardBindingValuesBase;
-  description: TweetCardBindingValuesBase;
-  domain: TweetCardBindingValuesBase;
+  title: TweetCardBindingValuesBase
+  description: TweetCardBindingValuesBase
+  domain: TweetCardBindingValuesBase
   thumbnail_image: {
     image_value: {
-      height: number;
-      width: number;
-      url: string;
-    };
-  };
+      height: number
+      width: number
+      url: string
+    }
+  }
   summary_photo_image: {
     image_value: {
-      height: number;
-      width: number;
-      url: string;
-    };
-  };
+      height: number
+      width: number
+      url: string
+    }
+  }
 }
 
 export interface TweetCard {
-  name: "summary" | "summary_large_image";
-  url: string;
-  binding_values: TweetCardBindingValues;
+  name: 'summary' | 'summary_large_image'
+  url: string
+  binding_values: TweetCardBindingValues
 }

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { TocLink } from "@nuxt/content/dist/runtime/types";
+import type { TocLink } from '@nuxt/content/dist/runtime/types'
 
 defineProps<{
-  links: TocLink[];
-}>();
+  links: TocLink[]
+}>()
 
-const router = useRouter();
+const router = useRouter()
 
 function scrollToHeading(id: string) {
-  router.push(`#${id}`);
+  router.push(`#${id}`)
 }
 </script>
 

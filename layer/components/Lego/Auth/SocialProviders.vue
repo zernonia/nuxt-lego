@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { rootKey } from "./.keys";
-import type { Provider } from "./.types";
+import { rootKey } from './.keys'
+import type { Provider } from './.types'
 
-const rootProps = inject(rootKey);
 const emits = defineEmits<{
-  (e: "select", payload: Provider): void;
-}>();
+  (e: 'select', payload: Provider): void
+}>()
+const rootProps = inject(rootKey)
 </script>
+
 <script lang="ts">
 export default {
   inheritAttrs: false,
-};
+}
 </script>
 
 <template>

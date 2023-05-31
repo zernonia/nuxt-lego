@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { MediaVideo } from "lego/types";
-import { getMediaUrl } from "~/../layer/utils/twitter";
+import type { MediaVideo } from 'lego/types'
+import { getMediaUrl } from '~/../layer/utils/twitter'
 
 defineProps<{
-  media: MediaVideo;
-}>();
+  media: MediaVideo
+}>()
 </script>
 
 <template>

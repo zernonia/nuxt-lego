@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import key from "./.keys";
+import key from './.keys'
 
-const bookmark = inject(key);
-const title = computed(() => bookmark?.value?.title);
+const bookmark = inject(key)
+const title = computed(() => bookmark?.value?.title)
 </script>
 
 <template>

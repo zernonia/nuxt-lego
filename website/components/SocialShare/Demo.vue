@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
-  url?: string;
-  text?: string;
-}>();
+  url?: string
+  text?: string
+}>()
 </script>
 
 <template>
@@ -19,7 +19,7 @@ defineProps<{
       class="text-blue-300 hover:text-blue-400 transition"
       :text="text"
     />
-    <LegoSocialShareReddit       
+    <LegoSocialShareReddit
       class="text-blue-300 hover:text-blue-400 transition"
       :text="text"
     />

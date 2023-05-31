@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // reference from: https://github.com/vercel-labs/react-tweet/
-import key from "./.keys";
-import { getTweetUrl } from "~/../layer/utils/twitter";
+import key from './.keys'
+import { getTweetUrl } from '~/../layer/utils/twitter'
 
 const props = defineProps<{
-  tweetId: string;
-}>();
+  tweetId: string
+}>()
 
-const { data, error, pending } = useFetch(`/api/get-tweet/${props.tweetId}`);
-provide(key, data);
+const { data, error, pending } = useFetch(`/api/get-tweet/${props.tweetId}`)
+provide(key, data)
 
-const url = computed(() => (data?.value ? getTweetUrl(data.value) : ""));
+const url = computed(() => (data?.value ? getTweetUrl(data.value) : ''))
 </script>
 
 <template>
