@@ -29,6 +29,8 @@
     "@types/node": "^18.16.2",
     "@unocss/nuxt": "^0.51.8",
     "@vueuse/core": "^10.1.0",
+    "@vueuse/math": "^10.1.2",
+    "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.1.0",
     "bumpp": "^9.1.0",
     "eslint": "^8.39.0",
