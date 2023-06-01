@@ -9,9 +9,9 @@ import type {
   UrlEntity,
   UserMentionEntity,
 } from 'lego/types'
+import { getHashtagUrl, getSymbolUrl, getUserUrl } from 'lego/utils/twitter'
 import key from './.keys'
 import LegoTweetLink from './Link.vue'
-import { getHashtagUrl, getSymbolUrl, getUserUrl } from '~/../layer/utils/twitter'
 
 const props = defineProps<{ linkClass?: string }>()
 

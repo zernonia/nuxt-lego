@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MediaVideo } from 'lego/types'
-import { getMediaUrl } from '~/../layer/utils/twitter'
+import { getMediaUrl } from 'lego/utils/twitter'
 
 defineProps<{
   media: MediaVideo

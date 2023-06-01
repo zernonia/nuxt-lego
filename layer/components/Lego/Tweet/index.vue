@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // reference from: https://github.com/vercel-labs/react-tweet/
+import { getTweetUrl } from 'lego/utils/twitter'
 import key from './.keys'
-import { getTweetUrl } from '~/../layer/utils/twitter'
 
 const props = defineProps<{
   tweetId: string

@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { getReplyUrl } from 'lego/utils/twitter'
 import key from '../.keys'
-import { getReplyUrl } from '~/../layer/utils/twitter'
 
 const tweet = inject(key)
 </script>
