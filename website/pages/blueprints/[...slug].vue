@@ -24,20 +24,15 @@ defineOgImageStatic({
 
 <template>
   <div class="flex flex-col w-full text-base md:text-lg">
-    <h1 class="text-4xl font-bold">
-      {{ data.title }}
-    </h1>
-
-    <BlueprintsContainer class="my-6">
+    <BlueprintsContainer class="mb-6">
       <component :is="data.reference" />
     </BlueprintsContainer>
 
-    <div class="flex ">
-      <ContentRenderer class="prose flex-shrink-0" :value="data" />
-
-      <div class="ml-8">
-        hi
-      </div>
+    <div class="prose lg:max-w-[54rem] mx-auto flex-shrink-0">
+      <h1>
+        {{ data.title }}
+      </h1>
+      <ContentRendererMarkdown :value="data" />
     </div>
   </div>
 </template>
