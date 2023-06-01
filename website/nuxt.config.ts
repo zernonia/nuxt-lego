@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg', href: '/logo.svg' }],
+      meta: [{ name: 'google-site-verification', content: '0fHjXCYubdueQI63delbgFoqfSf_90OQdhwJBW5NxpQ' }],
     },
   },
   modules: [
