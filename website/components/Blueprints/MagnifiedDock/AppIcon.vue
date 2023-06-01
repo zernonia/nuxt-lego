@@ -7,16 +7,17 @@ const props = defineProps<{
 const { mouseX } = toRefs(props)
 
 const target = ref<HTMLElement>()
+
+const { motionProperties } = useMotionProperties(target, { width: 40 })
+const { push } = useMotionTransitions()
+
+// relative distance of target element to mouseX
 const distance = computed(() => {
   const bounds = target.value?.getBoundingClientRect() ?? { x: 0, width: 0 }
 
   const val = Math.abs(mouseX.value - bounds.x - bounds.width / 2)
   return val > 150 ? 150 : val
 })
-
-const { motionProperties } = useMotionProperties(target, { width: 40 })
-const { push } = useMotionTransitions()
-
 const widthSync = useProjection(distance, [0, 150], [100, 40])
 
 watch(widthSync, () => {
@@ -25,5 +26,5 @@ watch(widthSync, () => {
 </script>
 
 <template>
-  <div ref="target" class="aspect-square w-10 rounded-full bg-gray-100" />
+  <div ref="target" class="aspect-square w-10 rounded-full bg-white" />
 </template>
