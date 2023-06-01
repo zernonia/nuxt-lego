@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       preload: ['vue', 'ts'],
     },
     navigation: {
-      fields: ['new'],
+      fields: ['new', 'image'],
     },
   },
   nitro: {

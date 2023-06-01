@@ -1,7 +1,8 @@
 ---
 title: Magnified Dock
 reference: BlueprintsMagnifiedDock
----
+image: magnified-dock.webp
+--- 
 
 
 
