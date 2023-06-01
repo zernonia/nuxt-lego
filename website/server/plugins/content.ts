@@ -36,7 +36,7 @@ export default defineNitroPlugin((nitroApp) => {
           }, {})
 
           const code = codeCache.get(params.src)
-          const codeBlock = `~~~${params.lang}\n${code}\n~~~`
+          const codeBlock = `~~~${params.lang}[${params.fileName}]\n${code}\n~~~`
 
           if (code)
             body = body.replace(match[0], codeBlock)
