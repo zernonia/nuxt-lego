@@ -28,11 +28,16 @@ defineOgImageStatic({
       <component :is="data.reference" />
     </BlueprintsContainer>
 
-    <div class="prose lg:max-w-[54rem] mx-auto flex-shrink-0">
+    <main class="prose w-full lg:max-w-54rem mx-auto">
       <h1>
         {{ data.title }}
       </h1>
       <ContentRendererMarkdown :value="data" />
-    </div>
+
+      <NuxtLink to="/blueprints" class="mt-12 inline-flex items-center underline underline-offset-4 underline-gray-100 hover:underline-blue-400 transition-all duration-1000">
+        <Icon name="uil:angle-right" class="text-xl" />
+        <span>cd ..</span>
+      </NuxtLink>
+    </main>
   </div>
 </template>
