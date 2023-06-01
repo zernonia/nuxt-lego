@@ -16,8 +16,8 @@ const navigation = computed(() => data.value?.[0].children)
     <ul class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <li v-for="item in navigation" :key="item._id" class="group">
         <NuxtLink :to="item._path">
-          <div class="border rounded-2xl bg-gradient-radial from-blue-400 to-blue-500 border-blue-400 ">
-            <img :src="`assets/img/${item.image}`">
+          <div class="h-48 flex items-center justify-center border rounded-2xl bg-gradient-radial from-blue-400 to-blue-500 border-blue-400 ">
+            <NuxtImg class="w-full h-auto bg-contain" :src="`${item.image}`" />
           </div>
 
           <h5 class="mt-2 text-gray-400 text-center group-hover:underline">

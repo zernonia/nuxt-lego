@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/content',
     '@nuxt/devtools',
+    '@nuxt/image-edge',
     '@nuxthq/studio',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
@@ -36,6 +37,9 @@ export default defineNuxtConfig({
   },
   unocss: {
     configFile: '~/uno.config.ts',
+  },
+  image: {
+    provider: 'ipx',
   },
   runtimeConfig: {
     public: {
