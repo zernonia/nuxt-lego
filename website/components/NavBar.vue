@@ -20,14 +20,20 @@ watch(
     <h1>
       <NuxtLink
         to="/"
-        class="text-2xl md:text-3xl font-bold flex items-center space-x-2"
+        class="text-xl md:text-2xl font-bold flex items-center space-x-2"
       >
-        <img src="/logo.svg" alt="NuxtLego" class="w-8 md:w-10">
+        <img src="/logo.svg" alt="NuxtLego" class="w-6 md:w-8">
         <span>NuxtLego</span>
       </NuxtLink>
     </h1>
 
     <div class="flex items-center">
+      <NuxtLink v-if="$route.path.includes('blueprints')" to="/blueprints" class="text-sm">
+        Blueprints
+      </NuxtLink>
+
+      <div v-if="$route.path.includes('blueprints')" to="/blueprints" class="h-4 w-1px mx-2 sm:mx-4 bg-gray-200" />
+
       <NuxtLink to="https://github.com/zernonia/nuxt-lego" target="_blank">
         <Icon class="text-3xl" name="uil:github" />
       </NuxtLink>

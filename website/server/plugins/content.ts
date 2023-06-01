@@ -6,7 +6,7 @@ import glob from 'fast-glob'
 
 const rootPath = resolve('.')
 const codeCache = new Map<string, string>()
-const codeFilePaths = [...glob.sync(resolve('website', '**', 'Demo.vue'))]
+const codeFilePaths = [...glob.sync(resolve('website', '**', 'components', '**'))]
 
 codeFilePaths.forEach((filePath) => {
   const keyName = filePath.split(rootPath)[1].slice(1)
@@ -36,7 +36,7 @@ export default defineNitroPlugin((nitroApp) => {
           }, {})
 
           const code = codeCache.get(params.src)
-          const codeBlock = `~~~${params.lang}\n${code}\n~~~`
+          const codeBlock = `~~~${params.lang}[${params.fileName}]\n${code}\n~~~`
 
           if (code)
             body = body.replace(match[0], codeBlock)

@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/content',
     '@nuxt/devtools',
+    '@nuxt/image-edge',
     '@nuxthq/studio',
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
   ],
   css: ['@unocss/reset/tailwind.css', '~/assets/css/main.css'],
   components: [
@@ -22,7 +25,7 @@ export default defineNuxtConfig({
       preload: ['vue', 'ts'],
     },
     navigation: {
-      fields: ['new'],
+      fields: ['new', 'image'],
     },
   },
   nitro: {
@@ -34,6 +37,9 @@ export default defineNuxtConfig({
   },
   unocss: {
     configFile: '~/uno.config.ts',
+  },
+  image: {
+    provider: 'ipx',
   },
   runtimeConfig: {
     public: {
