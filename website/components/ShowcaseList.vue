@@ -9,5 +9,6 @@
     <TocShowcase />
     <PageProgressShowcase />
     <MarqueeBannerShowcase />
+    <PreviewShowcase />
   </div>
 </template>

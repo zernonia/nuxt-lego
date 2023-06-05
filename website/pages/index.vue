@@ -9,6 +9,6 @@ useCustomHead({
 <template>
   <div>
     <Hero />
-    <Showcase />
+    <ShowcaseList />
   </div>
 </template>
