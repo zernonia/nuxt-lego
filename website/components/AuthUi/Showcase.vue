@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <ShowcaseCard class="group" to="/docs/components/auth-ui">
+  <ShowcaseCard slug="auth-ui">
     <template #image>
       <div>
         <div
@@ -31,12 +31,5 @@
         </div>
       </div>
     </template>
-
-    <h5 class="font-semibold">
-      Auth UI
-    </h5>
-    <p class="text-sm mt-1 text-gray-400">
-      Primitive Auth UI with Social Providers and Native Form.
-    </p>
   </ShowcaseCard>
 </template>
