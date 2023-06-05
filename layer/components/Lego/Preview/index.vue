@@ -4,12 +4,10 @@ import type { CSSProperties } from 'nuxt/dist/app/compat/capi'
 import { rootKey } from './.keys'
 
 const props = withDefaults(defineProps<{
-  padding?: number
   duration?: number
   maxWidth?: number
 }>(),
 {
-  padding: 200,
   duration: 500,
   maxWidth: 1000,
 })
