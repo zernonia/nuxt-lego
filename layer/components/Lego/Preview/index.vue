@@ -1,65 +1,35 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import type { CSSProperties } from 'nuxt/dist/app/compat/capi'
 import { rootKey } from './.keys'
 
 const props = withDefaults(defineProps<{
   padding?: number
   duration?: number
+  maxWidth?: number
 }>(),
 {
   padding: 200,
   duration: 500,
+  maxWidth: 1000,
 })
 
 const el = ref<HTMLElement>()
 const isPreviewActive = ref(false)
 const isTransitioning = refAutoReset(false, props.duration)
-
-const { left, width: elWidth, height: elHeight } = useElementBounding(el, {
-  windowResize: true,
-  windowScroll: false,
+const { width: windowWidth, height: windowHeight } = useWindowSize({
+  includeScrollbar: false,
 })
-const { width: windowWidth, height: windowHeight } = useWindowSize()
-
-const top = ref(0)
-
-watch([windowWidth, el], () => {
-  // Act as window resize observer
-  nextTick(() => {
-    if (el.value)
-      top.value = el.value?.getBoundingClientRect().top + window.pageYOffset
-  })
-}, { immediate: true })
 
 onKeyStroke('Escape', (e) => {
   e.preventDefault()
   isPreviewActive.value = false
 })
 
-const computedScale = ref(1)
-const computedTop = ref(0)
-
-const computedStyle = computed(() => {
-  if (isPreviewActive.value) {
-    return {
-      position: 'absolute',
-      left: `${left.value}px`,
-      top: `${computedTop.value}px`,
-      transform: `scale(${computedScale.value})`,
-      zIndex: '999',
-      cursor: 'zoom-out',
-    }
-  }
-  else {
-    return {
-      position: isTransitioning.value ? 'absolute' : 'initial',
-      zIndex: isTransitioning.value ? '999' : 'unset',
-      top: `${top.value}px`,
-      transform: 'scale(1)',
-      cursor: 'zoom-in',
-    }
-  }
-},
-)
+const computedStyle = ref<CSSProperties>({
+  position: 'absolute',
+  zIndex: '999',
+})
 
 const initialScrollPosition = ref(0)
 function handleScroll() {
@@ -69,24 +39,42 @@ function handleScroll() {
 }
 
 function applyStying() {
-  const scrollTop = window?.pageYOffset || document.documentElement.scrollTop
-  computedTop.value = scrollTop - window.screenY + ((windowHeight.value - elHeight.value) / 2)
+  if (!isPreviewActive.value || !el.value)
+    return
 
-  if (windowWidth.value < 900)
-    computedScale.value = (windowWidth.value) / elWidth.value
-  else
-    computedScale.value = (windowWidth.value - props.padding) / elWidth.value
+  const { top, left, width, height } = el.value.getBoundingClientRect()
+
+  const scaleX
+        = Math.max(width, windowWidth.value) / width
+  const scaleY
+        = Math.max(height, windowHeight.value) / height
+  const maxScaleX = props.maxWidth / width
+  const scale = Math.min(Math.min(scaleX, maxScaleX), scaleY)
+
+  const translateX = (-left + (windowWidth.value - width) / 2) / scale
+  const translateY = (-top + (windowHeight.value - height) / 2) / scale
+  const transform = `scale(${scale}) translate3d(${translateX}px, ${translateY}px, 0)`
+
+  computedStyle.value.top = `${top + window.pageYOffset}px`
+  computedStyle.value.left = `${left}px`
+  computedStyle.value.width = `${width}px`
+  computedStyle.value.transform = transform
+  computedStyle.value.cursor = 'zoom-out'
 }
+
 function clearStyling() {
-  computedTop.value = 0
+  computedStyle.value.transform = 'scale(1)'
+  computedStyle.value.cursor = 'zoom-in'
 }
 
 watch(isPreviewActive, (n) => {
   // add scroll event listener
   if (n) {
-    applyStying()
-    initialScrollPosition.value = window.scrollY
-    document.addEventListener('scroll', handleScroll)
+    nextTick(() => {
+      applyStying()
+      initialScrollPosition.value = window.scrollY
+      document.addEventListener('scroll', handleScroll)
+    })
   }
   else {
     clearStyling()
@@ -94,6 +82,10 @@ watch(isPreviewActive, (n) => {
     isTransitioning.value = true
     document.removeEventListener('scroll', handleScroll)
   }
+})
+
+watch(windowWidth, () => {
+  applyStying()
 })
 
 provide(rootKey, {
@@ -109,16 +101,27 @@ export default {
 
 <template>
   <div
-    v-bind="$attrs"
     ref="el"
+    :style="{
+      opacity: isPreviewActive || isTransitioning ? '0' : '1',
+      cursor: 'zoom-in',
+    }"
+    v-bind="$attrs"
     role="button"
     tabindex="0"
+    @click="isPreviewActive = !isPreviewActive"
+    @keydown.enter="isPreviewActive = !isPreviewActive"
+  >
+    <slot />
+  </div>
+
+  <!-- Zoom element -->
+  <div
+    v-if="isPreviewActive || isTransitioning"
+    v-bind="$attrs"
     :style="computedStyle"
     @click="isPreviewActive = !isPreviewActive"
   >
-    <div :style=" { width: isPreviewActive || isTransitioning ? `${elWidth}px` : '100%' }">
-      <slot />
-    </div>
+    <slot />
   </div>
-  <div v-if="isPreviewActive || isTransitioning" :style="{ height: `${elHeight}px` }" />
 </template>

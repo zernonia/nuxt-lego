@@ -16,6 +16,6 @@ export default {
 
 <template>
   <Teleport to="body">
-    <div v-if="isPreviewActive" v-bind="$attrs" role="dialog" aira-modal="true" @click="isPreviewActive = false" />
+    <div v-if="isPreviewActive" v-bind="$attrs" role="dialog" style="cursor: zoom-out;" aira-modal="true" @click="isPreviewActive = false" />
   </Teleport>
 </template>
