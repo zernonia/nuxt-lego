@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <ShowcaseCard to="/docs/components/website-card">
+  <ShowcaseCard slug="website-card">
     <template #image>
       <div
         class="mt-4 h-22 flex items-center border rounded-xl overflow-hidden"
@@ -19,12 +19,5 @@
         </div>
       </div>
     </template>
-
-    <h5 class="font-semibold">
-      Website Card
-    </h5>
-    <p class="text-sm mt-1 text-gray-400">
-      Render website card similar to Notion Bookmark.
-    </p>
   </ShowcaseCard>
 </template>

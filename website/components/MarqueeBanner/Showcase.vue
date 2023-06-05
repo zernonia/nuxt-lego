@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <ShowcaseCard to="/docs/components/marquee-banner">
+  <ShowcaseCard slug="marquee-banner">
     <template #image>
       <div class="overflow-hidden absolute fade-edge w-full">
         <div class="flex">
@@ -18,12 +18,5 @@
         </div>
       </div>
     </template>
-
-    <h5 class="font-semibold">
-      Marquee Banner
-    </h5>
-    <p class="text-sm mt-1 text-gray-400">
-      Simple and easy marquee effect.
-    </p>
   </ShowcaseCard>
 </template>
