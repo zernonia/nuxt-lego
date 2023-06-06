@@ -55,6 +55,7 @@ export default defineNuxtConfig({
       umamiHost: '',
       umamiId: '',
       umamiDomains: '',
+      studioTokens: '',
     },
   },
   ogImage: {
