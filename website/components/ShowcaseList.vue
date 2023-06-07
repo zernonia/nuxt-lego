@@ -6,9 +6,9 @@
     <StaticTweetShowcase />
     <WebsiteCardShowcase />
     <AuthUiShowcase />
-    <TocShowcase />
     <PageProgressShowcase />
     <MarqueeBannerShowcase />
     <PreviewShowcase />
+    <TocShowcase />
   </div>
 </template>
