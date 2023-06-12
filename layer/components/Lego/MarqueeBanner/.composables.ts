@@ -16,10 +16,25 @@ export const useMarqueeBanner = (el: Ref<HTMLElement[] | undefined>) => {
     return width + marginLeft + marginRight
   }).reduce((prev, curr) => prev + curr, 0) ?? 0)
 
-  const baseEl = computed(() => slots.default?.())
+  const baseEl = computed(() => {
+    const defaultSlots = slots.default?.()
+    if (!defaultSlots?.length)
+      return
+
+    const slotItems = defaultSlots.flatMap((i) => {
+      if (i.type.toString() === 'Symbol(v-fgt)')
+        return i.children
+
+      else
+        return i
+    })
+    return slotItems
+  })
+
+
   const shadowCount = computed(() => componentsWidth.value !== 0 ? Math.ceil(rootInject.width.value / componentsWidth.value) : 2)
   const shadowEl = computed(() => {
-    return Array.from(Array(shadowCount.value).keys()).map(() => slots.default?.()).flat()
+    return Array.from(Array(shadowCount.value).keys()).map(() => baseEl.value).flat()
   })
 
   const isHovering = ref(false)
