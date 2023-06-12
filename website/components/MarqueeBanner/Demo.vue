@@ -1,28 +1,17 @@
 <script setup lang="ts">
+const items = ['Vue', 'React', 'Angular']
 </script>
 
 <template>
   <LegoMarqueeBanner :speed="0.5" :hovered-speed="0.25" class="w-96 md:w-144 text-xl">
     <LegoMarqueeBannerLeft class="my-2">
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
-        Vue
-      </div>
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
-        React
-      </div>
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
-        Angular
+      <div v-for="item in items" :key="item" class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
+        {{ item }}
       </div>
     </LegoMarqueeBannerLeft>
     <LegoMarqueeBannerRight class="my-2">
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-100">
-        Nuxt
-      </div>
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-100">
-        Next
-      </div>
-      <div class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-100">
-        Analog
+      <div v-for="item in items" :key="item" class="whitespace-nowrap px-5 border hover:border-gray-400 transition mr-4 py-2 rounded-full bg-gray-50">
+        {{ item }}
       </div>
     </LegoMarqueeBannerRight>
   </LegoMarqueeBanner>
