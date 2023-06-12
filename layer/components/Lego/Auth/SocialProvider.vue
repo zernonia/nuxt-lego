@@ -24,6 +24,7 @@ const providerInfo = {
   azure: { title: 'azure', icon: 'devicon:azure' },
   bitbucket: { title: 'bitbucket', icon: 'devicon:bitbucket' },
   tiktok: { title: 'TikTok', icon: 'logos-tiktok-icon' },
+  linkedin: { title: 'LinkedIn', icon: 'devicon:linkedin' },
 }
 
 const mappedProvider = computed(() => providerInfo[props.provider])

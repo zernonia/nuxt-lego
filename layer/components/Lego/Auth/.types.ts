@@ -9,4 +9,5 @@ export type Provider =
   | "slack"
   | "azure"
   | "bitbucket"
-  | "tiktok";
+  | "tiktok"
+  | "linkedin";
