@@ -36,7 +36,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div style="display: flex; position: relative;  float: right" :style="{ transform: `translateX(${offset}px)` }" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div dir="ltr" style="display: flex; position: relative;  float: right" :style="{ transform: `translateX(${offset}px)` }" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <component :is="component" v-for="(component, index) in baseEl" ref="el" :key="index" />
     <component :is="component" v-for="(component, index) in shadowEl" :key="index" />
   </div>
