@@ -5,9 +5,11 @@ import { rootKey } from './.keys'
 const props = withDefaults(defineProps<{
   speed?: number
   hoveredSpeed?: number
+  shadowCount?: number
 }>(), {
   speed: 1,
   hoveredSpeed: 0.5,
+  shadowCount: 5,
 })
 
 const el = ref<HTMLDivElement>()

@@ -4,4 +4,5 @@ export const rootKey = Symbol() as InjectionKey<{
   width: Ref<number>,
   speed?: number,
   hoveredSpeed?: number
+  shadowCount?: number
 }>;
