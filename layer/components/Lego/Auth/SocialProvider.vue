@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import type { Component } from 'vue'
 import { rootKey } from './.keys'
 import type { Provider } from './.types'
 
 const props = defineProps<{
   provider: Provider
+  is?: Component
 }>()
 
 const emits = defineEmits<{
@@ -28,13 +30,17 @@ const providerInfo = {
 }
 
 const mappedProvider = computed(() => providerInfo[props.provider])
+
+const component = computed(() => {
+  return props.is ?? 'button'
+})
 </script>
 
 <template>
-  <button @click="emits('select', provider)">
+  <component :is="component" @click="emits('select', provider)">
     <Icon :name="mappedProvider.icon" />
     <div v-if="!rootProps?.hideProviderLabel">
       <slot> Sign in with {{ mappedProvider.title }} </slot>
     </div>
-  </button>
+  </component>
 </template>
