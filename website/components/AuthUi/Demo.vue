@@ -29,7 +29,7 @@ function handleSubmit(payload: { [key: string]: any }) {
 
     <div class="flex space-x-2 w-full mt-8">
       <LegoAuthSocialProviders
-        class="w-full px-4 py-3 border bg-white hover:bg-gray-50 transition rounded-lg flex justify-center"
+        class="w-full px-4 py-3 border bg-white hover:bg-gray-50 transition rounded-lg text-xl flex justify-center"
         @select="handleSelectProvider"
       />
     </div>
