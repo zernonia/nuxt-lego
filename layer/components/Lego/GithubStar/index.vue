@@ -4,6 +4,7 @@ import { useFetch } from '#imports'
 
 const props = defineProps<{
   repo: string
+  raw?: boolean
   to?: string
 }>()
 
@@ -12,13 +13,19 @@ const repo = computed(() => {
   return withoutBase(props.repo, 'https://github.com/')
 })
 const link = computed(() => {
-  return props.to || withBase(repo.value, 'https://github.com')
+  return props.to || withBase(repo.value, 'https://github.com/')
 })
 // pull the stars from the server
-const { data: stars } = await useFetch('/api/get-github-stars', {
+const { data } = await useFetch('/api/get-github-stars', {
   query: {
     repo,
   },
+})
+
+const stars = computed(() => {
+  if (props.raw)
+    return data.value
+  return new Intl.NumberFormat('en', { notation: 'compact' }).format(data.value)
 })
 </script>
 
