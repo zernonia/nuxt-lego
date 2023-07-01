@@ -1,6 +1,9 @@
 export default defineNuxtPlugin(() => {
   const cfg = useRuntimeConfig()
 
+  if (!cfg.public.umamiHost)
+    return
+
   const url = new URL('/script.js', cfg.public.umamiHost)
   const node = document.createElement('script')
   node.async = true
