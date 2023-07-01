@@ -10,5 +10,6 @@
     <MarqueeBannerShowcase />
     <PreviewShowcase />
     <TocShowcase />
+    <GithubStarShowcase />
   </div>
 </template>

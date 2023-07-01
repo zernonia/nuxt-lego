@@ -34,6 +34,16 @@ watch(
 
       <div v-if="$route.path.includes('blueprints')" to="/blueprints" class="h-4 w-1px mx-2 sm:mx-4 bg-gray-200" />
 
+      <LegoGithubStar v-slot="{ stars }" repo="zernonia/nuxt-lego" class="mr-5 group border bg-white hover:bg-gray-100 transition rounded-lg text-sm flex justify-center">
+        <div class="flex items-center bg-gray-100 group-hover:bg-gray-200 transition rounded-l px-2 py-1 space-x-1">
+          <Icon name="uil:star" class="group-hover:op75 " />
+          <div>Star</div>
+        </div>
+        <div class="px-2 py-1">
+          {{ stars }}
+        </div>
+      </LegoGithubStar>
+
       <NuxtLink to="https://github.com/zernonia/nuxt-lego" target="_blank">
         <Icon class="text-3xl" name="uil:github" />
       </NuxtLink>
