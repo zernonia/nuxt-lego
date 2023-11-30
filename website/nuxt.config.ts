@@ -10,10 +10,10 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/content',
     '@nuxt/devtools',
-    '@nuxt/image-edge',
     '@nuxthq/studio',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
+    "@nuxt/image"
   ],
   css: ['@unocss/reset/tailwind.css', '~/assets/css/main.css'],
   components: [
