@@ -31,7 +31,7 @@ Nuxt content quick & beautiful.
 
 # 📇 About The Project
 
-This idea was inspired by [Radix Primitive](https://www.radix-ui.com/), as well as [Oku UI](https://github.com/oku-ui). I wanted to try and create a _non-generic_ component, but using Radix's primitive approach. One example of non-generic component is [Static Tweet](https://nuxt-lego.vercel.app/docs/components/static-tweet).
+This idea was inspired by [Radix Primitive](https://www.radix-ui.com/), as well as [Radix Vue](https://github.com/radix-vue/radix-vue). I wanted to try and create a _non-generic_ component, but using Radix's primitive approach. One example of non-generic component is [Static Tweet](https://nuxt-lego.vercel.app/docs/components/static-tweet).
 
 This project also serve as a playground for me to learn and utilize more of Vue's `provide/inject` API.
 
